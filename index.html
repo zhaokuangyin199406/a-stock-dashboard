@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 A股每日复盘看板 — 2026年6月23日（周一）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 100%);
+            color: #e6edf3;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid #30363d;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #f85149, #ffa657, #f85149);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+        }
+        .quote {
+            background: #161b22;
+            border-left: 4px solid #f85149;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #8b949e;
+        }
+        .section {
+            background: #161b22;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #30363d;
+            color: #f0f6fc;
+        }
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .index-card {
+            background: linear-gradient(135deg, #21262d 0%, #2d333b 100%);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .index-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(248, 81, 73, 0.2);
+        }
+        .index-card.up {
+            border-left: 5px solid #3fb950;
+        }
+        .index-card.down {
+            border-left: 5px solid #f85149;
+        }
+        .index-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #c9d1d9;
+        }
+        .index-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .index-change {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .up .index-change {
+            color: #3fb950;
+        }
+        .down .index-change {
+            color: #f85149;
+        }
+        .index-volume {
+            color: #8b949e;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #30363d;
+        }
+        th {
+            background: #21262d;
+            color: #f0f6fc;
+            font-weight: bold;
+        }
+        tr:hover {
+            background: #1c2128;
+        }
+        .up-text {
+            color: #3fb950;
+            font-weight: bold;
+        }
+        .down-text {
+            color: #f85149;
+            font-weight: bold;
+        }
+        .flat-text {
+            color: #8b949e;
+        }
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .sector-card {
+            background: #21262d;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #30363d;
+        }
+        .sector-card.up {
+            border-left: 4px solid #3fb950;
+        }
+        .sector-card.down {
+            border-left: 4px solid #f85149;
+        }
+        .sector-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #c9d1d9;
+        }
+        .sector-change {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .news-item {
+            background: #21262d;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffa657;
+        }
+        .news-title {
+            font-weight: bold;
+            color: #f0f6fc;
+            margin-bottom: 8px;
+        }
+        .news-content {
+            color: #c9d1d9;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #ffa657;
+            font-weight: bold;
+        }
+        .risk {
+            color: #f85149;
+            font-weight: bold;
+        }
+        .opportunity {
+            color: #3fb950;
+            font-weight: bold;
+        }
+        .summary-card {
+            background: linear-gradient(135deg, #21262d 0%, #2d333b 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #30363d;
+        }
+        .summary-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f0f6fc;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            margin-top: 30px;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .data-source {
+            background: #0d1117;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #8b949e;
+            border: 1px solid #30363d;
+        }
+        .chart-placeholder {
+            background: #21262d;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: #8b949e;
+            margin: 20px 0;
+            border: 2px dashed #30363d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>🔥 A股每日复盘看板</h1>
+            <div class="subtitle">2026年6月23日（周一）· 大王出品</div>
+        </div>
+
+        <div class="quote">
+            "今天这一幕，指数跌得让人心里发毛，但翻开涨跌家数一看——红盘比绿盘多。这不是恐慌，是极致的结构分化。高位科技和资源品被集中抛售，医药、银行在低位的承接。市场在用脚投票，告诉我们：风格切换来了。"
+            <br>—— 大王
+        </div>
+
+        <!-- 一、指数涨跌 -->
+        <div class="section">
+            <div class="section-title">📊 一、指数涨跌全景</div>
+            <div class="index-grid">
+                <div class="index-card down">
+                    <div class="index-name">上证指数</div>
+                    <div class="index-value">4106.25</div>
+                    <div class="index-change">▼ -1.37%</div>
+                    <div class="index-volume">成交额：约1.5万亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">险守4100点整数关口</div>
+                </div>
+                <div class="index-card down">
+                    <div class="index-name">深证成指</div>
+                    <div class="index-value">15854.20</div>
+                    <div class="index-change">▼ -3.17%</div>
+                    <div class="index-volume">成交额：约1.97万亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">成长赛道拖累跌幅扩大</div>
+                </div>
+                <div class="index-card down">
+                    <div class="index-name">创业板指</div>
+                    <div class="index-value">4192.19</div>
+                    <div class="index-change">▼ -3.84%</div>
+                    <div class="index-volume">成交额：约8500亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">盘中最大跌幅4.59%</div>
+                </div>
+                <div class="index-card down">
+                    <div class="index-name">科创50</div>
+                    <div class="index-value">1916.21</div>
+                    <div class="index-change">▼ -1.68%</div>
+                    <div class="index-volume">成交额：约1200亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">半导体赛道深度调整</div>
+                </div>
+                <div class="index-card down">
+                    <div class="index-name">沪深300</div>
+                    <div class="index-value">4919.39</div>
+                    <div class="index-change">▼ -2.77%</div>
+                    <div class="index-volume">成交额：约2.1万亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">权重周期股大幅回调</div>
+                </div>
+                <div class="index-card down">
+                    <div class="index-name">北证50</div>
+                    <div class="index-value">1308.66</div>
+                    <div class="index-change">▼ -2.12%</div>
+                    <div class="index-volume">成交额：约300亿</div>
+                    <div style="margin-top: 10px; color: #8b949e; font-size: 0.9em;">小盘股跟随市场调整</div>
+                </div>
+            </div>
+            <div class="data-source">
+                📌 数据来源：百度百家号、东方财富、雪球 | 更新时间：2026-06-23 15:00
+            </div>
+        </div>
+
+        <!-- 二、市场情绪 -->
+        <div class="section">
+            <div class="section-title">🎭 二、市场情绪解码</div>
+            <table>
+                <tr>
+                    <th>维度</th>
+                    <th>数据</th>
+                    <th>解读</th>
+                </tr>
+                <tr>
+                    <td>上涨家数</td>
+                    <td class="up-text">2763家（50.2%）</td>
+                    <td>🟢 涨的家数略多于跌的，说明不是全面的恐慌，是指数失真</td>
+                </tr>
+                <tr>
+                    <td>下跌家数</td>
+                    <td class="down-text">2642家（48.1%）</td>
+                    <td>🟡 下跌家数接近上涨，但跌停家数明显增加，高位股补跌严重</td>
+                </tr>
+                <tr>
+                    <td>涨停</td>
+                    <td class="up-text">70+只</td>
+                    <td>🟡 涨停家数较前日79只减少，但仍有70+只，说明游资还在活跃</td>
+                </tr>
+                <tr>
+                    <td>跌停</td>
+                    <td class="down-text">30+只</td>
+                    <td>🔴 跌停家数较前日16只翻倍，高位科技股出现"断头铡刀"</td>
+                </tr>
+                <tr>
+                    <td>成交额</td>
+                    <td class="flat-text">3.47万亿</td>
+                    <td>🟡 缩量约2960亿，不是放量恐慌出逃，是买盘退潮+调仓</td>
+                </tr>
+                <tr>
+                    <td>主力资金</td>
+                    <td class="down-text">净流出642.7亿</td>
+                    <td>🔴 集中兑现前期抱团赛道，医药、银行小幅净流入</td>
+                </tr>
+                <tr>
+                    <td>北向资金</td>
+                    <td class="down-text">净流出32.4亿</td>
+                    <td>🟡 大幅减持有色、半导体高位龙头，小幅加仓医药、银行</td>
+                </tr>
+                <tr>
+                    <td>恐贪指数</td>
+                    <td class="flat-text">52（中性）</td>
+                    <td>🟡 较昨日回落16个百分点，市场做多信心快速降温</td>
+                </tr>
+            </table>
+            <div class="summary-card">
+                <div class="summary-title">💡 大王解读</div>
+                今天的市场情绪是<span class="highlight">"指数吓人、个股不跟跌"</span>的分裂状态。砸盘的力量非常集中——贵金属、半导体、PCB这些前期抱团的方向，而医药、银行、猪肉这些低位方向在承接。全市场2763只上涨对2642只下跌，说明<span class="opportunity">场内的钱没有离场，只是在换桌子</span>。
+            </div>
+        </div>
+
+        <!-- 三、板块异动 -->
+        <div class="section">
+            <div class="section-title">🚀 三、板块异动全景</div>
+            <h3 style="color: #3fb950; margin: 20px 0 15px 0;">📈 涨幅TOP5（逆势王者）</h3>
+            <div class="sector-grid">
+                <div class="sector-card up">
+                    <div class="sector-name">医药生物</div>
+                    <div class="sector-change up-text">+1.33%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">创新药、CRO、中药全线走强，特一药业、新华制药等多股涨停</div>
+                </div>
+                <div class="sector-card up">
+                    <div class="sector-name">银行</div>
+                    <div class="sector-change up-text">+1.15%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">国有大行、股份制银行震荡上行，低估值高股息属性凸显</div>
+                </div>
+                <div class="sector-card up">
+                    <div class="sector-name">纺织服饰</div>
+                    <div class="sector-change up-text">+1.04%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">低位消费板块逆势抗跌，资金避险配置</div>
+                </div>
+                <div class="sector-card up">
+                    <div class="sector-name">证券</div>
+                    <div class="sector-change up-text">+0.8%（分化）</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">长江证券2连板，华安证券涨停，但板块内部分化</div>
+                </div>
+                <div class="sector-card up">
+                    <div class="sector-name">猪肉</div>
+                    <div class="sector-change up-text">+0.5%（逆势）</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">部分超跌农业链承接资金，北证50成分活跃</div>
+                </div>
+            </div>
+
+            <h3 style="color: #f85149; margin: 20px 0 15px 0;">📉 跌幅TOP5（重灾区）</h3>
+            <div class="sector-grid">
+                <div class="sector-card down">
+                    <div class="sector-name">有色金属</div>
+                    <div class="sector-change down-text">-7.24%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">贵金属、稀土、小金属全线暴跌，中稀有色、华锡有色跌停</div>
+                </div>
+                <div class="sector-card down">
+                    <div class="sector-name">电力设备</div>
+                    <div class="sector-change down-text">-4.04%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">光伏、储能、锂电池赛道集体回调，高位成长赛道杀跌</div>
+                </div>
+                <div class="sector-card down">
+                    <div class="sector-name">国防军工</div>
+                    <div class="sector-change down-text">-3.26%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">前期涨幅较大，机构半年考核节点兑现盈利</div>
+                </div>
+                <div class="sector-card down">
+                    <div class="sector-name">电子（半导体）</div>
+                    <div class="sector-change down-text">-3.1%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">PCB、CPO、通信设备深度回调，生益科技等近30只跌超9%</div>
+                </div>
+                <div class="sector-card down">
+                    <div class="sector-name">计算机</div>
+                    <div class="sector-change down-text">-2.5%</div>
+                    <div style="margin-top: 8px; color: #8b949e; font-size: 0.9em;">AI应用、算力概念高位震荡，资金获利了结</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 四、热门涨停题材 -->
+        <div class="section">
+            <div class="section-title">🔥 四、热门涨停题材拆解</div>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>题材方向</th>
+                    <th>涨停家数估算</th>
+                    <th>核心逻辑</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="up-text">创新药/CRO</td>
+                    <td>15+只</td>
+                    <td>半年末机构避险配置+集采利空充分消化+中报业绩修复预期，新华制药、海南海药、亨迪药业等多股封板</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="up-text">中药</td>
+                    <td>10+只</td>
+                    <td>医药生物板块内部分化，中药方向低估值修复，特一药业、云南白药等活跃</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="up-text">证券（低位）</td>
+                    <td>5+只</td>
+                    <td>陆家嘴论坛释放资本市场改革利好+估值修复+政策重定价，长江证券2连板</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="up-text">猪肉/农业</td>
+                    <td>5+只</td>
+                    <td>超跌反弹+防御属性，部分资金从科技转向农业链</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="up-text">人形机器人（局部）</td>
+                    <td>3+只</td>
+                    <td>达沃斯论坛催化+政策支持，但板块内部分化严重，仅局部活跃</td>
+                </tr>
+            </table>
+            <div class="summary-card">
+                <div class="summary-title">💡 大王观察</div>
+                今天的涨停题材集中在<span class="opportunity">"防御+政策"</span>两个方向。创新药和中药是纯粹的避险配置——上半年跌多了，估值洼地，机构半年末做账需要。证券是政策催化——陆家嘴论坛的改革预期还在，但板块内部分化，不是所有券商都能涨。相比之下，前期的<span class="risk">AI算力、PCB、半导体这些题材，今天都在被集中抛售</span>，不是基本面变了，是筹码松动了。
+            </div>
+        </div>
+
+        <!-- 五、行业资金流向 -->
+        <div class="section">
+            <div class="section-title">💰 五、行业资金流向监控</div>
+            <h3 style="color: #3fb950; margin: 20px 0 15px 0;">🟢 净流入TOP5（聪明钱去哪了）</h3>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>行业</th>
+                    <th>净流入金额</th>
+                    <th>流向逻辑</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="up-text">医药生物</td>
+                    <td class="up-text">+58.3亿</td>
+                    <td>创新药、CRO板块获主力资金青睐，机构避险配置+中报业绩修复双驱动</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="up-text">银行</td>
+                    <td class="up-text">+42.7亿</td>
+                    <td>国有大行、股份制银行获主力资金持续流入，低估值高股息属性凸显</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="up-text">证券</td>
+                    <td class="up-text">+18.5亿（分化）</td>
+                    <td>长江证券、华安证券等低位券商获资金流入，但板块整体分化</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="up-text">纺织服饰</td>
+                    <td class="up-text">+8.2亿</td>
+                    <td>低位消费板块获零散资金配置，防御属性</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="up-text">猪肉/农业</td>
+                    <td class="up-text">+5.6亿</td>
+                    <td>超跌反弹+防御，部分资金从科技转向农业链</td>
+                </tr>
+            </table>
+
+            <h3 style="color: #f85149; margin: 20px 0 15px 0;">🔴 净流出TOP5（机构在逃什么）</h3>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>行业</th>
+                    <th>净流出金额</th>
+                    <th>流出逻辑</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="down-text">有色金属</td>
+                    <td class="down-text">-186.4亿</td>
+                    <td>贵金属、稀土、小金属板块遭主力资金集中抛售，美银加息预期+国际金价跳水双杀</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="down-text">电子（半导体）</td>
+                    <td class="down-text">-128.7亿</td>
+                    <td>PCB、CPO、通信设备板块遭减持，韩国科技股暴跌传导+高位筹码松动</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="down-text">电力设备</td>
+                    <td class="down-text">-95.2亿</td>
+                    <td>光伏、储能、锂电池赛道遭赎回，高位成长赛道杀跌</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="down-text">国防军工</td>
+                    <td class="down-text">-45.8亿</td>
+                    <td>前期涨幅较大，机构半年考核节点兑现盈利</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="down-text">计算机</td>
+                    <td class="down-text">-38.6亿</td>
+                    <td>AI应用、算力概念高位震荡，资金获利了结</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 六、重大消息面 -->
+        <div class="section">
+            <div class="section-title">📰 六、重大消息面解读</div>
+            <div class="news-item">
+                <div class="news-title">1️⃣ 美银喊出"年内加息三次"，全球资产定价锚被搅浑</div>
+                <div class="news-content">
+                    美国银行证券Aditya Bhave团队发报告，预计美联储将在2026年9月、10月和12月各加息25个基点，把基准利率从3.50%-3.75%推到4.25%-4.50%。这是目前所有主流投行里最激进的预测。<br><br>
+                    <span class="risk">影响：</span>加息预期升温=给无息资产判了逆风刑。黄金、白银、工业金属被砸，A股有色金属和贵金属板块今天直接变成重灾区。但冷静的声音指出，美银核心PCE到3.5%的推算建立在油价维持高位假设上，而布伦特原油已从115美元回落到78美元附近，跌幅超30%。<span class="highlight">市场今天很可能把"最激进预测"当成了"既成事实"来定价</span>。
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">2️⃣ 韩国KOSPI暴跌9.99%盘中熔断，亚太科技股被踩踏</div>
+                <div class="news-content">
+                    6月23日，韩国综合指数KOSPI收跌9.99%，盘中两度触发熔断机制。三星电子跌12.31%，SK海力士跌12.47%，均为2008年金融危机以来最大单日跌幅。外资净卖出超4万亿韩元。<br><br>
+                    <span class="risk">影响：</span>A股和韩国半导体链有映射关系的CPO、PCB、元器件、通信设备，午后几乎同步往下跳。不是A股自己的业绩出了问题，是<span class="risk">亚太半导体定价锚（三星、海力士）当天被砸出了一个黑洞级别的缺口</span>，情绪顺着产业链传导过来了。
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">3️⃣ 2026夏季达沃斯论坛开幕，总理致辞释放开放信号</div>
+                <div class="news-content">
+                    2026夏季达沃斯论坛今日在大连开幕，总理出席开幕式并致辞，围绕产业创新、对外开放释放稳定市场信号。论坛将持续到6月25日，硬科技、储能、高端制造等板块有望持续受益。<br><br>
+                    <span class="opportunity">影响：</span>政策暖风频吹，但今天市场情绪偏弱，资金还在观望。明天如果科技板块能企稳，达沃斯论坛的催化可能会重新激活人气。
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">4️⃣ 三部委发布《利用外资固稳促优行动方案》，扩大服务业开放</div>
+                <div class="news-content">
+                    商务部、国家发改委、金融监管总局联合发布《利用外资固稳促优行动方案》，扩大服务业、医药、金融业对外开放，稳定外资长期配置信心。具体包括放宽外资券商、资管机构准入限制，允许外资开办技能培训班、职业学校等。<br><br>
+                    <span class="opportunity">影响：</span>长期利好金融、医药板块，但短期对市场情绪拉动有限。外资配置A股是一个慢变量，不会今天出政策明天就暴涨。
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">5️⃣ 科创板第五套上市标准扩容至AI大模型、量子、生物制造</div>
+                <div class="news-content">
+                    上交所宣布科创板第五套上市标准扩容至AI大模型、量子科技、生物制造等前沿领域，拓宽硬科技企业上市渠道。<br><br>
+                    <span class="opportunity">影响：</span>利好券商投行与前沿科创企业，但今天市场情绪偏弱，这个消息可能被低估了。<span class="highlight">明天如果市场企稳，这个方向可能会成为新的题材催化剂</span>。
+                </div>
+            </div>
+        </div>
+
+        <!-- 七、详细市场点评 -->
+        <div class="section">
+            <div class="section-title">🧠 七、详细市场点评——大王视角</div>
+            
+            <div class="summary-card">
+                <div class="summary-title">📈 趋势判断</div>
+                <p>今天这根阴线，不是系统性走熊的信号，是<span class="highlight">连续上涨后的结构性回调</span>。上证4106点，险守4100整数关口；创业板4192点，把昨天的大阳线几乎一口吞掉。但全市场2763只上涨对2642只下跌，说明不是全面的恐慌，是指数失真。</p>
+                <p>技术面看，今天留下了长下影线，说明4100点附近有人愿意接。但美银加息预期+韩股熔断这两根外部导火索，让盘面的内部张力不一样了。<span class="risk">短期沪指重点观察4080支撑有效性，如果跌破，可能要回踩4050</span>。</p>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-title">😬 情绪分析</div>
+                <p>恐贪指数52，中性区间，较昨日回落16个百分点。市场做多信心快速降温，但不是崩溃。涨停家数70+只，说明游资还在活跃；跌停家数30+只，说明高位股补跌严重。</p>
+                <p><span class="highlight">核心矛盾：指数跌成这样，但涨跌家数接近平衡</span>。这说明砸盘的力量非常集中——贵金属、半导体、PCB这些前期抱团的方向，而医药、银行、猪肉这些低位方向在承接。资金在换桌子，不是离场。</p>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-title">🎯 主线梳理</div>
+                <p><span class="risk">旧主线（正在瓦解）：</span>贵金属/有色金属、半导体/PCB/CPO、光伏/储能。这些方向上半年积累了大量浮盈，机构半年考核节点兑现盈利的动力强。今天不是基本面向下了变化，是筹码松动了。</p>
+                <p><span class="opportunity">新主线（正在形成）：</span>医药（创新药/CRO/中药）、银行、证券（低位）。这些方向低估值、高股息、避险属性强，半年末机构做账需要。但能不能成为新的持续主线，还要观察明天能不能继续走强。</p>
+                <p><span class="highlight">潜在主线（待验证）：</span>达沃斯论坛催化的硬科技、储能、高端制造；科创板第五套标准扩容催化的AI大模型、量子科技。这两个方向今天被市场情绪掩盖了，明天如果市场企稳，可能会重新激活人气。</p>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-title">💸 资金动向</div>
+                <p>主力资金净流出642.7亿，集中兑现前期抱团赛道。北向资金净流出32.4亿，大幅减持有色、半导体高位龙头，小幅加仓医药、银行蓝筹。</p>
+                <p><span class="highlight">关键观察：中信股指期货四大合约合计加空2796手</span>，当前全合约净空单70135手。机构预判短期市场延续震荡调整，高位赛道仍有回调空间。</p>
+                <p>但南向资金净流入7.6亿港元，布局港股医药、消费低估值标的。说明<span class="opportunity">聪明钱在找洼地，不是在逃跑</span>。</p>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-title">⚠️ 风险提示</div>
+                <p>1. <span class="risk">贵金属、半导体、PCB等高位赛道延续回调风险</span>。美银加息预期还没落地，国际金价如果继续走弱，有色板块可能还有一跌。</p>
+                <p>2. <span class="risk">板块轮动速度加快，短线追高极易被套</span>。今天的涨停板，明天可能就跌停。情绪不稳定，操作要谨慎。</p>
+                <p>3. <span class="risk">外围扰动持续</span>。韩国股市今天暴跌9.99%，明天会不会继续跌？美银的加息预测会不会被更多投行跟进？这些外部变量还在。</p>
+                <p>4. <span class="risk">半年末流动性压力</span>。6月底是机构半年考核节点，资金面可能偏紧。7月初才能缓解。</p>
+            </div>
+        </div>
+
+        <!-- 八、速览卡 -->
+        <div class="section">
+            <div class="section-title">📌 八、速览卡——一张表看懂今天</div>
+            <table>
+                <tr>
+                    <th>标的</th>
+                    <th>今日涨跌</th>
+                    <th>信号</th>
+                </tr>
+                <tr>
+                    <td>上证指数</td>
+                    <td class="down-text">-1.37%</td>
+                    <td>险守4100点，观察4080支撑</td>
+                </tr>
+                <tr>
+                    <td>创业板指</td>
+                    <td class="down-text">-3.84%</td>
+                    <td>高位科技链杀跌，等待企稳信号</td>
+                </tr>
+                <tr>
+                    <td>证券ETF(512880)</td>
+                    <td class="up-text">+0.8%（分化）</td>
+                    <td>长江证券2连板，板块内部分化</td>
+                </tr>
+                <tr>
+                    <td>光云科技(688365)</td>
+                    <td class="down-text">预计-5%左右</td>
+                    <td>科创板科技股承压，观察明天能否企稳</td>
+                </tr>
+                <tr>
+                    <td>振华新材(688707)</td>
+                    <td class="down-text">预计-3%左右</td>
+                    <td>锂电池赛道回调，但中报业绩预期仍在</td>
+                </tr>
+                <tr>
+                    <td>金钼股份(601958)</td>
+                    <td class="down-text">预计-8%左右</td>
+                    <td>有色金属板块重挫，钼价短期承压</td>
+                </tr>
+                <tr>
+                    <td>医药ETF</td>
+                    <td class="up-text">+1.3%</td>
+                    <td>避险属性凸显，机构配置需求强</td>
+                </tr>
+                <tr>
+                    <td>银行ETF</td>
+                    <td class="up-text">+1.1%</td>
+                    <td>低估值高股息，防御属性强</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 九、明日策略 -->
+        <div class="section">
+            <div class="section-title">🎯 九、明日策略——大王给你划重点</div>
+            <div class="summary-card">
+                <div class="summary-title">✅ 可以做的</div>
+                <p>1. <span class="opportunity">逢低布局医药、银行、证券（低位）</span>。这些方向今天已经证明有承接力，明天如果市场企稳，可能会继续走强。</p>
+                <p>2. <span class="opportunity">关注达沃斯论坛催化的硬科技、储能、高端制造</span>。今天被市场情绪掩盖了，明天如果市场企稳，可能会重新激活人气。</p>
+                <p>3. <span class="opportunity">关注科创板第五套标准扩容催化的AI大模型、量子科技</span>。这个消息今天可能被低估了，明天可能会成为新的题材催化剂。</p>
+            </div>
+            <div class="summary-card">
+                <div class="summary-title">❌ 要回避的</div>
+                <p>1. <span class="risk">高位有色、贵金属</span>。美银加息预期还在，国际金价如果继续走弱，可能还有一跌。</p>
+                <p>2. <span class="risk">高位半导体、PCB、CPO</span>。韩国科技股暴跌的传导还没结束，筹码松动，短线不要抄底。</p>
+                <p>3. <span class="risk">高位光伏、储能</span>。锂电池赛道回调，资金在切换，不要追高。</p>
+            </div>
+            <div class="summary-card">
+                <div class="summary-title">⚖️ 仓位建议</div>
+                <p>整体仓位控制<span class="highlight">5-6成</span>，不盲目抄底高位回调品种。如果明天市场企稳，可以加到7成；如果继续下跌，降到4成。</p>
+                <p>配置建议：<span class="opportunity">医药30% + 银行20% + 证券10% + 现金40%</span>。等待市场方向明朗后再加仓。</p>
+            </div>
+        </div>
+
+        <!-- 大王一句话 -->
+        <div class="quote" style="border-left-color: #ffa657; font-size: 1.2em; text-align: center; padding: 25px;">
+            <span class="emoji">⚡</span> <strong>大王一句话：</strong>今天这一跌，不是行情结束，是风格切换。高位科技和资源品在兑现，低位医药和金融在承接。别慌，也别贪，盯着资金流向，跟着聪明钱走。明天如果市场企稳，就是新主线的起跑线。
+        </div>
+
+        <div class="footer">
+            <p>📊 数据来源：百度百家号、东方财富、财联社、雪球、知乎</p>
+            <p>📝 复盘制作：ETF大王 · 2026年6月23日</p>
+            <p>⚠️ 免责声明：本报告仅供参考，不构成投资建议。股市有风险，投资需谨慎。</p>
+        </div>
+    </div>
+</body>
+</html>
