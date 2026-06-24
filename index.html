@@ -13,17 +13,14 @@ body {
   font-size: 13px; line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
-/* 顶部 */
 .top { text-align: center; padding: 16px 0 10px; }
 .top h1 { font-size: 1.2em; color: #fff; font-weight: 700; margin-bottom: 3px; }
 .top .sub { font-size: 0.75em; color: #8b949e; }
 .top .tagline {
-  background: #161b22; border-left: 3px solid #f85149;
+  background: #161b22; border-left: 3px solid #3fb950;
   padding: 8px 12px; margin-top: 10px; border-radius: 0 6px 6px 0;
   font-size: 0.78em; color: #8b949e; font-style: italic; text-align: left;
 }
-
-/* 通用卡片 */
 .card {
   background: #161b22; border-radius: 10px;
   padding: 14px; margin-bottom: 12px;
@@ -36,8 +33,6 @@ body {
   display: flex; align-items: center; gap: 6px;
 }
 .card-title .num { color: #ffa657; font-size: 0.85em; }
-
-/* 表格通用 */
 .tbl { width: 100%; border-collapse: collapse; font-size: 0.84em; }
 .tbl th { color: #8b949e; font-weight: 500; font-size: 0.78em; padding: 5px 6px; text-align: left; border-bottom: 1px solid #21262d; }
 .tbl td { padding: 7px 6px; border-bottom: 1px solid #21262d; vertical-align: top; }
@@ -45,213 +40,196 @@ body {
 .up { color: #f85149; font-weight: 700; }
 .dn { color: #3fb950; font-weight: 700; }
 .note { color: #484f58; font-size: 0.88em; }
-
-/* 段落文字 */
 .p { font-size: 0.84em; color: #c9d1d9; line-height: 1.7; margin-bottom: 8px; }
 .p b { color: #f0f6fc; }
 .p em { color: #ffa657; font-style: normal; font-weight: 600; }
 .highlight { background: rgba(187,128,9,0.13); padding: 0 3px; border-radius: 2px; }
-
-/* 消息块 */
 .news { margin-bottom: 12px; }
 .news h3 { font-size: 0.85em; color: #f0f6fc; margin-bottom: 4px; }
 .news .body { font-size: 0.82em; color: #8b949e; line-height: 1.65; }
-
-/* 策略块 */
 .strat { margin-bottom: 6px; font-size: 0.84em; }
 .strat-good { color: #3fb950; }
 .strat-bad { color: #f85149; }
 .strat-note { color: #8b949e; font-size: 0.82em; margin: 6px 0 4px; }
-
-/* 速览行 */
 .w-row { display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #21262d; font-size: 0.84em; }
 .w-row:last-child { border-bottom: none; }
 .w-name { flex: 1; color: #c9d1d9; }
 .w-chg { font-weight: 700; width: 65px; text-align: right; }
 .w-sig { color: #484f58; font-size: 0.82em; width: 95px; text-align: right; }
-
-/* 大王金句 */
 .king {
   text-align: center; padding: 16px 10px; margin: 14px 0;
   border-top: 1px solid #21262d; border-bottom: 1px solid #21262d;
 }
 .king .bolt { color: #ffa657; font-size: 0.85em; margin-bottom: 6px; }
 .king .text { color: #ffa657; font-size: 0.95em; font-weight: 700; line-height: 1.6; }
-
-/* 底部 */
 .footer { text-align: center; padding: 16px 0 0; color: #484f58; font-size: 0.7em; }
-
-/* 分隔线 */
 .space { height: 4px; }
 </style>
 </head>
 <body>
 
-<!-- 顶部 -->
 <div class="top">
   <h1>A股每日复盘</h1>
-  <div class="sub">2026年6月23日 · 周一 · 大王出品</div>
-  <div class="tagline">跌的是指数不是市场，砸的是高位不是所有。资金在换桌子，不是离场。</div>
+  <div class="sub">2026年6月24日 · 周二 · 大王出品</div>
+  <div class="tagline">指数全红但4000家下跌——这不是反转，是极致抱团。科技主线回归，但赚钱效应没扩散。</div>
 </div>
 
-<!-- 一、指数涨跌 -->
+<!-- 一、指数 -->
 <div class="card">
   <div class="card-title"><span class="num">01</span> 指数涨跌</div>
   <table class="tbl">
     <tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>备注</th></tr>
-    <tr><td>上证指数</td><td>4106.25</td><td class="dn">-1.37%</td><td class="note">险守4100，盘中最低4083</td></tr>
-    <tr><td>深证成指</td><td>15854.20</td><td class="dn">-3.17%</td><td class="note">成长赛道拖累，跌幅最深</td></tr>
-    <tr><td>创业板指</td><td>4192.19</td><td class="dn">-3.84%</td><td class="note">盘中最大跌幅4.59%</td></tr>
-    <tr><td>科创50</td><td>1916.21</td><td class="dn">-1.68%</td><td class="note">半导体赛道深度调整</td></tr>
-    <tr><td>沪深300</td><td>4919.39</td><td class="dn">-2.77%</td><td class="note">权重周期股大幅回调</td></tr>
+    <tr><td>上证指数</td><td>4110.81</td><td class="up">+0.11%</td><td class="note">低开高走，险守4100</td></tr>
+    <tr><td>深证成指</td><td>15902.21</td><td class="up">+0.30%</td><td class="note">科技股带动反弹</td></tr>
+    <tr><td>创业板指</td><td>4246.58</td><td class="up">+1.30%</td><td class="note">芯片+AI硬件强势</td></tr>
+    <tr><td>科创50</td><td>1975.55</td><td class="up">+3.20%</td><td class="note">半导体集体爆发</td></tr>
+    <tr><td>沪深300</td><td>4958.17</td><td class="up">+0.78%</td><td class="note">权重科技股拉动</td></tr>
   </table>
   <div class="space"></div>
-  <div class="p">全市场 <b>2763家上涨 vs 2642家下跌</b>，涨跌家数几乎打平，指数严重失真。砸盘力量非常集中——主要在贵金属和半导体，低位方向反而在承接。这不是恐慌，是极致的结构分化。</div>
+  <div class="p">隔夜美股大跌、韩国芯片股暴跌，A股低开后顽强翻红。<b>科创50涨超3%</b>，半导体/PCB/CPO集体爆发，把昨天的失地几乎全收回来。但——<em>全市场仍有4000+家下跌，中位数跌幅1.96%</em>。指数红是红，但赚钱效应没扩散。</div>
 </div>
 
-<!-- 二、市场情绪 -->
+<!-- 二、情绪 -->
 <div class="card">
   <div class="card-title"><span class="num">02</span> 市场情绪</div>
   <table class="tbl">
     <tr><th>维度</th><th>数据</th><th>解读</th></tr>
-    <tr><td>成交额</td><td>3.47万亿</td><td class="note">缩量约2960亿，买盘退潮非恐慌</td></tr>
-    <tr><td>上涨家数</td><td>2763家（50.2%）</td><td class="note">涨的比跌的多，指数被权重拖累</td></tr>
-    <tr><td>下跌家数</td><td>2642家（48.1%）</td><td class="note">高位股补跌严重，低位反而在涨</td></tr>
-    <tr><td>涨停</td><td class="up">70+只</td><td class="note">游资活跃，集中在医药和金融</td></tr>
-    <tr><td>跌停</td><td class="dn">30+只</td><td class="note">高位科技股断头铡，恐慌抛售</td></tr>
-    <tr><td>主力资金</td><td class="dn">净流出642亿</td><td class="note">集中兑现贵金属和半导体</td></tr>
-    <tr><td>北向资金</td><td class="dn">净流出32亿</td><td class="note">减有色半导，加仓医药银行</td></tr>
-    <tr><td>恐贪指数</td><td>52（中性）</td><td class="note">较昨日回落16个百分点</td></tr>
+    <tr><td>成交额</td><td>3.28万亿</td><td class="note">缩量4.5%，资金未离场</td></tr>
+    <tr><td>上涨家数</td><td>1200+家</td><td class="note">⚠️ 4000+家下跌，极度分化</td></tr>
+    <tr><td>下跌家数</td><td>4000+家</td><td class="note">中位数跌幅1.96%</td></tr>
+    <tr><td>涨停</td><td class="up">98只</td><td class="note">集中在科技龙头</td></tr>
+    <tr><td>跌停</td><td class="dn">10只</td><td class="note">恐慌情绪消退</td></tr>
+    <tr><td>主力资金</td><td class="up">+186亿</td><td class="note">回流半导体/AI硬件</td></tr>
+    <tr><td>板块特征</td><td>极致抱团</td><td class="note">非主线标的没流动性</td></tr>
   </table>
   <div class="space"></div>
-  <div class="p"><b>核心矛盾：</b>指数跌成这样，涨跌家数却接近平衡。<em>资金在换桌子，不是离场。</em></div>
+  <div class="p"><b>核心矛盾：</b>指数翻红，但4000家下跌。<em>资金全抱团在科技龙头里，其他票基本没流动性</em>。这不是普涨，是结构性极致抱团。</div>
 </div>
 
-<!-- 三、板块异动 -->
+<!-- 三、板块 -->
 <div class="card">
   <div class="card-title"><span class="num">03</span> 板块异动</div>
-  <div style="color:#3fb950;font-size:0.82em;font-weight:600;margin-bottom:6px">▲ 涨幅 TOP5</div>
+  <div style="color:#f85149;font-size:0.82em;font-weight:600;margin-bottom:6px">▲ 涨幅 TOP5</div>
   <table class="tbl">
     <tr><th>板块</th><th>涨幅</th><th>一句话逻辑</th></tr>
-    <tr><td>医药生物</td><td class="up">+1.33%</td><td class="note">创新药、CRO掀涨停潮，新华制药等10余股封板，机构避险配置</td></tr>
-    <tr><td>银行</td><td class="up">+1.15%</td><td class="note">国有大行、股份制银行震荡上行，低估值高股息属性凸显</td></tr>
-    <tr><td>纺织服饰</td><td class="up">+1.04%</td><td class="note">低位消费板块逆势抗跌，资金避险配置</td></tr>
-    <tr><td>证券（分化）</td><td class="up">+0.80%</td><td class="note">长江证券2连板，华安证券涨停，板块内部分化明显</td></tr>
-    <tr><td>猪肉/农业</td><td class="up">+0.50%</td><td class="note">超跌反弹，防御属性承接科技流出资金</td></tr>
+    <tr><td>半导体/芯片</td><td class="up">+4.2%</td><td class="note">长电科技2板、兆易创新涨停、中芯国际+5.72%</td></tr>
+    <tr><td>PCB/CPO</td><td class="up">+3.8%</td><td class="note">算力硬件集体爆发，昨日跌幅全收回</td></tr>
+    <tr><td>AI硬件/算力</td><td class="up">+3.5%</td><td class="note">宏景科技涨停创历史新高，订单排到2027年</td></tr>
+    <tr><td>磷化铟/光电子</td><td class="up">+3.1%</td><td class="note">兴业科技一字板，三安光电2板</td></tr>
+    <tr><td>洁净室/光刻胶</td><td class="up">+2.5%</td><td class="note">容大感光+8.13%，蓝英装备+6.27%</td></tr>
   </table>
-  <div style="color:#f85149;font-size:0.82em;font-weight:600;margin:12px 0 6px">▼ 跌幅 TOP5</div>
+  <div style="color:#3fb950;font-size:0.82em;font-weight:600;margin:12px 0 6px">▼ 跌幅 TOP5</div>
   <table class="tbl">
     <tr><th>板块</th><th>跌幅</th><th>一句话逻辑</th></tr>
-    <tr><td>有色金属</td><td class="dn">-7.24%</td><td class="note">贵金属、稀土、小金属全线暴跌，中稀有色、华锡有色跌停</td></tr>
-    <tr><td>电力设备</td><td class="dn">-4.04%</td><td class="note">光伏、储能、锂电池被集中赎回，高位成长赛道杀跌</td></tr>
-    <tr><td>国防军工</td><td class="dn">-3.26%</td><td class="note">前期涨幅较大，机构半年末考核节点兑现盈利</td></tr>
-    <tr><td>电子（半导体）</td><td class="dn">-3.10%</td><td class="note">PCB、CPO、通信设备深度回调，韩国科技股暴跌传导</td></tr>
-    <tr><td>计算机</td><td class="dn">-2.50%</td><td class="note">AI应用、算力概念高位震荡，资金获利了结</td></tr>
+    <tr><td>影视院线</td><td class="dn">-2.31%</td><td class="note">北京文化、博纳影业跌超4%</td></tr>
+    <tr><td>旅游及酒店</td><td class="dn">-2.12%</td><td class="note">西安饮食、君亭酒店跌超3%</td></tr>
+    <tr><td>猪肉</td><td class="dn">-1.93%</td><td class="note">牧原股份-2.24%，昨日避险今日被弃</td></tr>
+    <tr><td>煤炭</td><td class="dn">-1.87%</td><td class="note">兖矿能源-2.52%</td></tr>
+    <tr><td>创新药/银行</td><td class="dn">-1.5%</td><td class="note">昨日防御今日一日游，量化助涨助跌</td></tr>
   </table>
 </div>
 
-<!-- 四、热门涨停题材 -->
+<!-- 四、涨停题材 -->
 <div class="card">
   <div class="card-title"><span class="num">04</span> 热门涨停题材</div>
   <table class="tbl">
     <tr><th>题材方向</th><th>涨停家数</th><th>核心逻辑</th></tr>
-    <tr><td>创新药/CRO</td><td class="up">15+</td><td class="note">半年末机构避险配置 + 集采利空充分消化 + 中报业绩修复预期</td></tr>
-    <tr><td>中药</td><td class="up">10+</td><td class="note">医药生物板块低估值修复，特一药业等多股活跃</td></tr>
-    <tr><td>证券（低位）</td><td class="up">5+</td><td class="note">陆家嘴论坛释放资本市场改革利好 + 估值修复 + 政策重定价</td></tr>
-    <tr><td>猪肉/农业</td><td class="up">5+</td><td class="note">超跌反弹，部分资金从科技转向农业链</td></tr>
-    <tr><td>人形机器人</td><td class="up">3+</td><td class="note">达沃斯论坛催化 + 政策支持，但板块内部分化严重</td></tr>
+    <tr><td>半导体/芯片</td><td class="up">30+</td><td class="note">长电科技2板、兆易创新涨停、中芯国际+5.72%，中报业绩催化</td></tr>
+    <tr><td>AI硬件/算力</td><td class="up">20+</td><td class="note">宏景科技涨停创历史新高，艾华集团6天5板</td></tr>
+    <tr><td>PCB/CPO</td><td class="up">15+</td><td class="note">通鼎互联5天3板，剑桥科技3天2板，算力基建回归</td></tr>
+    <tr><td>磷化铟/光电子</td><td class="up">8+</td><td class="note">兴业科技一字板，三安光电2板，云南锗业涨停</td></tr>
+    <tr><td>脑机接口/商业航天</td><td class="up">5+</td><td class="note">局部轮动，持续性偏弱，冲高回落</td></tr>
   </table>
   <div class="space"></div>
-  <div class="p">今天的涨停题材集中在<b>"防御+政策"</b>两个方向。创新药和中药是纯粹的避险配置，证券是政策催化。前期AI算力、PCB、半导体这些方向，今天被集中抛售——<em>不是基本面变了，是筹码松了。</em></div>
+  <div class="p">今天的涨停90%集中在<b>科技主线</b>。半导体中报业绩超预期——长电科技上半年净利润预增120%-150%，兆易创新二季度存储芯片出货量环比增40%。<em> macro逻辑通畅，但抱团极致，非主线票没流动性</em>。</div>
 </div>
 
-<!-- 五、资金流向 -->
+<!-- 五、资金 -->
 <div class="card">
   <div class="card-title"><span class="num">05</span> 行业资金流向</div>
-  <div style="color:#3fb950;font-size:0.82em;font-weight:600;margin-bottom:6px">▲ 净流入 TOP5</div>
+  <div style="color:#f85149;font-size:0.82em;font-weight:600;margin-bottom:6px">▲ 净流入 TOP5</div>
   <table class="tbl">
-    <tr><th>行业</th><th>净流入</th><th>流向逻辑</th></tr>
-    <tr><td>医药生物</td><td class="up">+58亿</td><td class="note">创新药CRO获主力资金青睐，机构避险配置+中报业绩修复双驱动</td></tr>
-    <tr><td>银行</td><td class="up">+43亿</td><td class="note">国有大行、股份制银行获主力资金持续流入，低估值高股息属性凸显</td></tr>
-    <tr><td>证券</td><td class="up">+19亿</td><td class="note">长江证券、华安证券等低位券商获资金流入，但板块整体分化</td></tr>
-    <tr><td>纺织服饰</td><td class="up">+8亿</td><td class="note">低位消费板块获零散资金配置，防御属性</td></tr>
-    <tr><td>猪肉/农业</td><td class="up">+6亿</td><td class="note">超跌反弹+防御，部分资金从科技转向农业链</td></tr>
+    <tr><th>行业</th><th>净流入</th><th>逻辑</th></tr>
+    <tr><td>半导体/芯片</td><td class="up">+186亿</td><td class="note">中报业绩催化+昨日超跌反弹，主力大举回流</td></tr>
+    <tr><td>PCB/CPO</td><td class="up">+95亿</td><td class="note">算力硬件集体爆发，昨日跌幅全收回</td></tr>
+    <tr><td>AI算力/硬件</td><td class="up">+78亿</td><td class="note">宏景科技涨停，订单排到2027年，机构加仓</td></tr>
+    <tr><td>洁净室/光刻胶</td><td class="up">+28亿</td><td class="note">容大感光+8.13%，材料端跟涨</td></tr>
+    <tr><td>磷化铟/光电子</td><td class="up">+15亿</td><td class="note">兴业科技一字板，三安光电2板</td></tr>
   </table>
-  <div style="color:#f85149;font-size:0.82em;font-weight:600;margin:12px 0 6px">▼ 净流出 TOP5</div>
+  <div style="color:#3fb950;font-size:0.82em;font-weight:600;margin:12px 0 6px">▼ 净流出 TOP5</div>
   <table class="tbl">
-    <tr><th>行业</th><th>净流出</th><th>流出逻辑</th></tr>
-    <tr><td>有色金属</td><td class="dn">-186亿</td><td class="note">贵金属、稀土、小金属板块遭主力资金集中抛售，美银加息预期+国际金价跳水双杀</td></tr>
-    <tr><td>电子（半导体）</td><td class="dn">-129亿</td><td class="note">PCB、CPO、通信设备板块遭减持，韩国科技股暴跌传导+高位筹码松动</td></tr>
-    <tr><td>电力设备</td><td class="dn">-95亿</td><td class="note">光伏、储能、锂电池赛道遭赎回，高位成长赛道杀跌</td></tr>
-    <tr><td>国防军工</td><td class="dn">-46亿</td><td class="note">前期涨幅较大，机构半年考核节点兑现盈利</td></tr>
-    <tr><td>计算机</td><td class="dn">-39亿</td><td class="note">AI应用、算力概念高位震荡，资金获利了结</td></tr>
+    <tr><th>行业</th><th>净流出</th><th>逻辑</th></tr>
+    <tr><td>创新药/医药</td><td class="dn">-68亿</td><td class="note">昨日防御今日一日游，量化助涨助跌</td></tr>
+    <tr><td>银行</td><td class="dn">-42亿</td><td class="note">防御板块轮动结束，资金回流科技</td></tr>
+    <tr><td>猪肉/农业</td><td class="dn">-35亿</td><td class="note">避险逻辑被证伪，资金撤离</td></tr>
+    <tr><td>影视院线</td><td class="dn">-18亿</td><td class="note">消费复苏预期降温</td></tr>
+    <tr><td>旅游酒店</td><td class="dn">-12亿</td><td class="note">暑期预期被砸</td></tr>
   </table>
 </div>
 
-<!-- 六、重大消息面 -->
+<!-- 六、消息 -->
 <div class="card">
   <div class="card-title"><span class="num">06</span> 重大消息面</div>
   <div class="news">
-    <h3>1. 美银喊出"年内加息三次"，全球资产定价锚被搅浑</h3>
-    <div class="body">美国银行预测美联储将在9月、10月、12月各加息25bp，是目前主流投行中最激进的预测。黄金、白银、工业金属全线暴跌，A股有色金属板块直接变成重灾区。但要注意：美银推算建立在油价维持高位假设上，而布伦特原油已从115美元回落到78美元附近，跌幅超30%。<span class="highlight">市场今天很可能把"最激进预测"当成了"既成事实"来定价</span>。</div>
+    <h3>1. 长电科技中报预增120%-150%，半导体业绩超预期</h3>
+    <div class="body">封测龙头长电科技发布中报预告，上半年净利润预增120%-150%，远超市场预期。兆易创新二季度存储芯片出货量环比增长40%。<span class="highlight">业绩是今天半导体爆发的最硬逻辑</span>——不是情绪炒作，是基本面驱动。</div>
   </div>
   <div class="news">
-    <h3>2. 韩国KOSPI暴跌9.99%盘中熔断，亚太科技股被踩踏</h3>
-    <div class="body">三星电子跌12.31%，SK海力士跌12.47%，均为2008年以来最大单日跌幅。外资净卖出超4万亿韩元。A股CPO/PCB/元器件午后同步跳水——<span class="highlight">不是A股自己的业绩出了问题，是亚太半导体定价锚被砸出了黑洞级别的缺口</span>，情绪顺着产业链传导过来。</div>
+    <h3>2. 宏景科技涨停创历史新高，算力订单排到2027年Q1</h3>
+    <div class="body">AI算力租赁龙头宏景科技涨停，股价创历史新高，公司在手订单排期到2027年一季度。<span class="highlight">算力基建的逻辑从"预期"变成"订单验证"</span>，机构开始真金白银加仓。</div>
   </div>
   <div class="news">
-    <h3>3. 2026夏季达沃斯论坛开幕，总理致辞释放开放信号</h3>
-    <div class="body">论坛持续到6月25日，围绕产业创新、对外开放释放稳定市场信号。硬科技、储能、高端制造有望持续受益。今天市场情绪偏弱，资金还在观望——<span class="highlight">明天如果科技板块能企稳，达沃斯的催化可能会重新激活人气</span>。</div>
+    <h3>3. 韩国KOSPI反弹+1.21%，亚太科技股情绪企稳</h3>
+    <div class="body">昨日暴跌9.99%的韩国KOSPI今天反弹1.21%，三星、SK海力士跌后反弹。<span class="highlight">亚太半导体定价锚企稳，A股科技股的情绪压制解除</span>，是今天低开高走的关键外部因素。</div>
   </div>
   <div class="news">
-    <h3>4. 三部委发布稳外资15条 + 科创板第五套标准扩容</h3>
-    <div class="body">放宽外资券商资管机构准入，允许外资开办技能培训班。同时科创板第五套标准扩容至AI大模型、量子科技、生物制造。<span class="highlight">这两个消息今天都被市场情绪低估了，明天如果企稳，可能成为新的题材催化剂</span>。</div>
+    <h3>4. 昨日防御板块今日全线熄火，量化助涨助跌特征明显</h3>
+    <div class="body">创新药、银行、证券昨日逆势上涨，今日全线下跌，恒瑞医药-1.73%、招商银行-0.84%。<span class="highlight">防御板块一日游，量化资金在里面高频切换</span>，追高防御的资金今日普遍亏损3%+。</div>
   </div>
 </div>
 
-<!-- 七、详细市场点评 -->
+<!-- 七、点评 -->
 <div class="card">
   <div class="card-title"><span class="num">07</span> 详细市场点评</div>
-  <div class="p"><b>📈 趋势判断</b><br>今天不是系统性走熊，是连续上涨后的结构性回调+风格切换。上证险守4100，技术面留下长下影线，说明4100附近有人愿意接。但美银加息预期+韩股熔断让盘面内部张力变了。<em>短期重点观察4080支撑，跌破可能回踩4050</em>。</div>
-  <div class="p"><b>😬 情绪分析</b><br>恐贪指数52，中性区间，较昨日回落16个百分点。涨停70+说明游资还在活跃，跌停30+说明高位股补跌严重。核心特征：<em>"指数吓人、个股不跟跌"</em>——场内的钱没有离场，只是在重新排队。</div>
-  <div class="p"><b>🎯 主线梳理</b><br><span style="color:#f85149">旧主线（瓦解中）：</span>贵金属/有色金属、半导体/PCB/CPO、光伏/储能。不是基本面变差，是筹码松了。<br><span style="color:#3fb950">新主线（形成中）：</span>医药（创新药/CRO/中药）、银行、低位证券。低估值高股息，半年末机构做账需要。<br><span style="color:#ffa657">潜在主线（待验证）：</span>达沃斯催化硬科技、科创板扩围催化AI大模型和量子科技。</div>
-  <div class="p"><b>💸 资金动向</b><br>主力净流出642亿集中兑现高位赛道。北向减持有色半导体，加仓医药银行。中信期指四大合约加空2796手，全合约净空70135手——机构预判短期延续震荡调整。但南向资金净流入7.6亿港元布局港股——<em>聪明钱在找洼地，不是逃跑</em>。</div>
-  <div class="p"><b>⚠️ 风险提示</b><br>1. 高位有色贵金属回调可能还没完；2. 韩国暴跌传导未结束；3. 板块轮动加速，短线追高易被套；4. 半年末流动性偏紧，7月初缓解。</div>
+  <div class="p"><b>📈 趋势</b><br>今天低开高走翻红，技术面验证了<b>上证60日线支撑有效</b>（数次回踩未破）。创业板收在5日线上方，高位强势震荡。但3.28万亿的成交比昨天缩量，<em>量能不足，普涨难，结构性行情延续</em>。</div>
+  <div class="p"><b>😬 情绪</b><br>指数红但4000家下跌，中位数跌幅1.96%。<b>极致抱团</b>——资金全在科技龙头里，其他票基本没流动性。涨停98家但集中在科技，跌停仅10家说明不是恐慌，是选择性上涨。</div>
+  <div class="p"><b>🎯 主线</b><br><span style="color:#f85149">科技主线强势回归：</span>半导体（中报业绩）+ PCB/CPO（算力基建）+ AI硬件（订单验证）。<br><span style="color:#3fb950">防御主线一日游：</span>医药/银行/证券昨日涨今日跌，量化助涨助跌。<br><span style="color:#ffa657">新主线潜力：</span>磷化铟/光电子，洁净室/光刻胶——半导体上游材料开始补涨。</span></div>
+  <div class="p"><b>💸 资金</b><br>主力净流入186亿，全在科技。科创50涨3.2%但全市场4000家下跌——<em>不是水涨船高，是资金极度集中</em>。这种行情只有抱对方向才能赚钱，方向错了比昨天还惨。</div>
+  <div class="p"><b>⚠️ 风险</b><br>1. 极致抱团的另一面是流动性危机——如果明天科技分化，非主线票可能继续跌；2. 中报预告陆续披露，业绩不及预期的科技股会被砸；3. 外围扰动未完全消除，韩国若再跌会二次传导。</div>
 </div>
 
-<!-- 八、持仓速览 -->
+<!-- 八、速览 -->
 <div class="card">
   <div class="card-title"><span class="num">08</span> 持仓速览</div>
-  <div class="w-row"><span class="w-name">上证指数</span><span class="w-chg dn">-1.37%</span><span class="w-sig">险守4100，观察4080</span></div>
-  <div class="w-row"><span class="w-name">创业板指</span><span class="w-chg dn">-3.84%</span><span class="w-sig">高位科技链杀跌</span></div>
-  <div class="w-row"><span class="w-name">证券ETF（512880）</span><span class="w-chg up">+0.8%</span><span class="w-sig">长江2连板，分化</span></div>
-  <div class="w-row"><span class="w-name">医药ETF</span><span class="w-chg up">+1.3%</span><span class="w-sig">避险首选，可关注</span></div>
-  <div class="w-row"><span class="w-name">银行ETF</span><span class="w-chg up">+1.1%</span><span class="w-sig">防御力强</span></div>
-  <div class="w-row"><span class="w-name">金钼股份（601958）</span><span class="w-chg dn">-8%</span><span class="w-sig">有色拖累，暂回避</span></div>
+  <div class="w-row"><span class="w-name">上证指数</span><span class="w-chg up">+0.11%</span><span class="w-sig">60日线支撑有效</span></div>
+  <div class="w-row"><span class="w-name">创业板指</span><span class="w-chg up">+1.30%</span><span class="w-sig">科技带动反弹</span></div>
+  <div class="w-row"><span class="w-name">科创50</span><span class="w-chg up">+3.20%</span><span class="w-sig">半导体爆发，强</span></div>
+  <div class="w-row"><span class="w-name">证券ETF（512880）</span><span class="w-chg dn">-1.21%</span><span class="w-sig">防御一日游</span></div>
+  <div class="w-row"><span class="w-name">医药ETF</span><span class="w-chg dn">-1.73%</span><span class="w-sig">昨日防御今日跌</span></div>
+  <div class="w-row"><span class="w-name">半导体ETF</span><span class="w-chg up">+4.2%</span><span class="w-sig">中报催化，强</span></div>
 </div>
 
-<!-- 九、明日策略 -->
+<!-- 九、策略 -->
 <div class="card">
   <div class="card-title"><span class="num">09</span> 明日策略</div>
   <div class="strat-note">✅ 可以关注：</div>
-  <div class="strat strat-good">· 医药、银行、低位证券——今天已证明有承接力</div>
-  <div class="strat strat-good">· 达沃斯催化硬科技、储能、高端制造</div>
-  <div class="strat strat-good">· 科创板扩围催化AI大模型和量子科技</div>
+  <div class="strat strat-good">· 半导体/芯片龙头——中报业绩验证，资金持续流入</div>
+  <div class="strat strat-good">· PCB/CPO/AI硬件——算力基建逻辑硬，订单验证期</div>
+  <div class="strat strat-good">· 磷化铟/光电子/洁净室——半导体上游材料补涨</div>
   <div class="strat-note" style="margin-top:10px">❌ 暂时回避：</div>
-  <div class="strat strat-bad">· 高位有色贵金属——美银加息预期还没消化完</div>
-  <div class="strat strat-bad">· 高位半导体/PCB/CPO——韩国传导未结束，别抄底</div>
-  <div class="strat strat-bad">· 高位光伏/储能——资金在切换赛道</div>
+  <div class="strat strat-bad">· 创新药/银行/证券——防御板块一日游，量化助涨助跌</div>
+  <div class="strat strat-bad">· 影视/旅游/猪肉——消费复苏预期降温</div>
+  <div class="strat strat-bad">· 非主线小微盘股——流动性极差，抱团外溢风险</div>
   <div class="strat-note" style="margin-top:10px">⚖️ 仓位建议：</div>
-  <div class="p">整体5-6成，不盲目抄底高位品种。企稳可加到7成，继续跌退到4成。配置：医药30% + 银行20% + 证券10% + 现金40%，等方向明朗再加仓。</div>
+  <div class="p">整体6-7成，<b>聚焦科技主线</b>。半导体30% + PCB/CPO 20% + AI硬件20% + 现金30%。不追高位的芯片股，等回调介入。防御板块暂时不碰，等科技分化再看。</div>
 </div>
 
-<!-- 大王金句 -->
 <div class="king">
   <div class="bolt">⚡ 大王一句话</div>
-  <div class="text">今天跌的是指数不是市场，<br>砸的是高位不是所有。<br>别慌，别贪，盯着资金流向走。<br>明天如果企稳，就是新主线的起跑线。</div>
+  <div class="text">指数翻红但4000家下跌，<br>这是极致抱团不是普涨。<br>抱对科技吃肉，抱错方向挨打。<br>中报季，业绩是硬道理。</div>
 </div>
 
-<div class="footer">📊 数据来源：东方财富 / 百度百家号 / 财联社 / 雪球<br>ETF大王 · 2026年6月23日 · 仅供参考不作投资建议</div>
+<div class="footer">📊 数据来源：东方财富 / 百度百家号 / 新浪财经 · ETF大王 · 仅供参考不作投资建议</div>
 
 </body>
 </html>
