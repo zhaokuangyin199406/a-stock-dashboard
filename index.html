@@ -1,633 +1,239 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A股每日复盘 — 2026年6月24日（周三）</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #24292e;
-            background: #fff;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            font-size: 1.5em;
-            margin: 30px 0 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #dfe2e8;
-        }
-        
-        h2 {
-            font-size: 1.15em;
-            margin: 25px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #dfe2e8;
-        }
-        
-        .subtitle {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-            font-weight: normal;
-        }
-        
-        hr {
-            border: none;
-            border-top: 1px solid #dfe2e8;
-            margin: 30px 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        
-        th, td {
-            padding: 10px 8px;
-            text-align: left;
-            border: 1px solid #dfe2e8;
-        }
-        
-        th {
-            background: #f6f8fa;
-            font-weight: 600;
-        }
-        
-        tr:nth-child(even) {
-            background: #f6f8fa;
-        }
-        
-        .up {
-            color: #cf222e;
-            font-weight: 600;
-        }
-        
-        .down {
-            color: #1a7f37;
-            font-weight: 600;
-        }
-        
-        blockquote {
-            border-left: 4px solid #dfe2e8;
-            padding: 10px 15px;
-            margin: 15px 0;
-            color: #666;
-            font-size: 14px;
-            background: #f9f9f9;
-        }
-        
-        ul, ol {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        
-        li {
-            margin: 8px 0;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #dfe2e8;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-        }
-        
-        .news-item {
-            margin: 15px 0;
-            padding: 12px;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-        
-        .news-item strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #24292e;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #0d1117;
-                color: #c9d1d9;
-            }
-            
-            h1, h2 {
-                border-bottom-color: #30363d;
-            }
-            
-            .subtitle {
-                color: #8b949e;
-            }
-            
-            hr {
-                border-top-color: #30363d;
-            }
-            
-            th, td {
-                border-color: #30363d;
-            }
-            
-            th {
-                background: #161b22;
-            }
-            
-            tr:nth-child(even) {
-                background: #161b22;
-            }
-            
-            .up {
-                color: #f85149;
-            }
-            
-            .down {
-                color: #3fb950;
-            }
-            
-            blockquote {
-                border-left-color: #30363d;
-                background: #161b22;
-                color: #8b949e;
-            }
-            
-            .news-item {
-                background: #161b22;
-            }
-            
-            .news-item strong {
-                color: #c9d1d9;
-            }
-            
-            .footer {
-                border-top-color: #30363d;
-                color: #8b949e;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>A股复盘 · 大王出品</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17; color: #c9d1d9;
+  padding: 12px; padding-bottom: 40px;
+  max-width: 420px; margin: 0 auto;
+  font-size: 14px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+/* 顶部 */
+.top { text-align: center; padding: 14px 0 10px; }
+.top h1 { font-size: 1.15em; color: #fff; font-weight: 700; margin-bottom: 2px; }
+.top .sub { font-size: 0.75em; color: #8b949e; }
+.top .tagline { font-size: 0.78em; color: #8b949e; margin-top: 6px; font-style: italic; }
+
+/* 卡片 */
+.card {
+  background: #161b22; border-radius: 10px;
+  padding: 14px; margin-bottom: 12px;
+  border: 1px solid #21262d;
+}
+.card-title {
+  font-size: 0.85em; color: #8b949e; font-weight: 600;
+  margin-bottom: 10px; padding-bottom: 6px;
+  border-bottom: 1px solid #21262d;
+  display: flex; align-items: center; gap: 6px;
+}
+.card-title::before {
+  content: ''; display: inline-block;
+  width: 3px; height: 14px; border-radius: 2px; background: #ffa657;
+}
+
+/* 指数行 */
+.idx-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 0; border-bottom: 1px solid #21262d;
+}
+.idx-row:last-child { border-bottom: none; }
+.idx-name { font-size: 0.88em; color: #c9d1d9; flex: 1; }
+.idx-val { font-size: 0.85em; color: #8b949e; width: 70px; text-align: right; }
+.idx-chg { font-size: 0.88em; font-weight: 700; width: 65px; text-align: right; }
+.up { color: #f85149; }
+.dn { color: #3fb950; }
+
+/* 情绪行 */
+.emo-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 6px 0; border-bottom: 1px solid #21262d;
+  font-size: 0.82em;
+}
+.emo-row:last-child { border-bottom: none; }
+.emo-label { color: #8b949e; flex: 1; }
+.emo-val { color: #c9d1d9; font-weight: 600; width: 85px; text-align: right; }
+.emo-note { color: #484f58; font-size: 0.85em; width: 100px; text-align: right; }
+
+/* 板块行 */
+.sec-row {
+  display: flex; align-items: center; padding: 6px 0;
+  border-bottom: 1px solid #21262d; font-size: 0.84em;
+}
+.sec-row:last-child { border-bottom: none; }
+.sec-rank { color: #484f58; width: 18px; font-size: 0.78em; }
+.sec-name { flex: 1; color: #c9d1d9; }
+.sec-chg { font-weight: 700; width: 60px; text-align: right; }
+.sec-note { color: #484f58; font-size: 0.82em; width: 110px; text-align: right; }
+
+/* 资金行 */
+.fund-row {
+  display: flex; align-items: center; padding: 6px 0;
+  border-bottom: 1px solid #21262d; font-size: 0.84em;
+}
+.fund-row:last-child { border-bottom: none; }
+.fund-name { flex: 1; color: #c9d1d9; }
+.fund-val { font-weight: 700; width: 75px; text-align: right; }
+
+/* 消息 */
+.news-item { margin-bottom: 10px; }
+.news-item h3 { font-size: 0.85em; color: #f0f6fc; margin-bottom: 3px; }
+.news-item p { font-size: 0.8em; color: #8b949e; line-height: 1.6; }
+.news-tag { color: #ffa657; font-weight: 600; }
+
+/* 点评段落 */
+.opinion { font-size: 0.84em; color: #c9d1d9; line-height: 1.7; margin-bottom: 10px; }
+.opinion b { color: #f0f6fc; }
+
+/* 策略 */
+.strat-good { color: #3fb950; font-size: 0.84em; margin-bottom: 3px; }
+.strat-bad { color: #f85149; font-size: 0.84em; margin-bottom: 3px; }
+.strat-note { color: #8b949e; font-size: 0.82em; margin: 8px 0 4px; }
+
+/* 速览表 */
+.watch-row {
+  display: flex; align-items: center; padding: 6px 0;
+  border-bottom: 1px solid #21262d; font-size: 0.84em;
+}
+.watch-row:last-child { border-bottom: none; }
+.watch-name { flex: 1; color: #c9d1d9; }
+.watch-chg { font-weight: 700; width: 65px; text-align: right; }
+.watch-sig { color: #484f58; font-size: 0.82em; width: 100px; text-align: right; }
+
+/* 大王金句 */
+.king-quote {
+  text-align: center; padding: 16px 12px; margin: 14px 0;
+  border-top: 1px solid #21262d; border-bottom: 1px solid #21262d;
+}
+.king-quote .bolt { color: #ffa657; font-size: 0.9em; }
+.king-quote .text { color: #ffa657; font-size: 0.95em; font-weight: 600; line-height: 1.6; }
+
+/* 底部 */
+.footer { text-align: center; padding: 16px 0 0; color: #484f58; font-size: 0.7em; }
+
+/* 分隔 */
+.divider { height: 1px; background: #21262d; margin: 6px 0; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>📊 A股每日复盘 — 2026年6月24日（周三）</h1>
-        <p class="subtitle">大王出品 · 科技领涨，指数分化，资金抱团龙头</p>
 
-        <hr>
+<!-- 顶部 -->
+<div class="top">
+  <h1>A股每日复盘</h1>
+  <div class="sub">2026年6月23日 · 周一</div>
+  <div class="tagline">跌的是指数不是市场，砸的是高位不是所有</div>
+</div>
 
-        <h2>一、指数涨跌</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>指数</th>
-                    <th>收盘</th>
-                    <th>涨跌幅</th>
-                    <th>备注</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>上证指数</td>
-                    <td>4110.81</td>
-                    <td class="up">+0.51%</td>
-                    <td>低开高走，温和收涨</td>
-                </tr>
-                <tr>
-                    <td>深证成指</td>
-                    <td>16051.32</td>
-                    <td class="up">+1.70%</td>
-                    <td>科技股带动，涨幅领先</td>
-                </tr>
-                <tr>
-                    <td>创业板指</td>
-                    <td>4251.42</td>
-                    <td class="up">+1.66%</td>
-                    <td>成长股强势反弹</td>
-                </tr>
-                <tr>
-                    <td>科创50</td>
-                    <td>1989.43</td>
-                    <td class="up">+4.91%</td>
-                    <td>半导体爆发，领涨全市场</td>
-                </tr>
-                <tr>
-                    <td>沪深300</td>
-                    <td>4943.02</td>
-                    <td class="up">+0.87%</td>
-                    <td>权重股稳健上行</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- 一、指数 -->
+<div class="card">
+  <div class="card-title">指数涨跌</div>
+  <div class="idx-row"><span class="idx-name">上证指数</span><span class="idx-val">4106.25</span><span class="idx-chg dn">-1.37%</span></div>
+  <div class="idx-row"><span class="idx-name">深证成指</span><span class="idx-val">15854.20</span><span class="idx-chg dn">-3.17%</span></div>
+  <div class="idx-row"><span class="idx-name">创业板指</span><span class="idx-val">4192.19</span><span class="idx-chg dn">-3.84%</span></div>
+  <div class="idx-row"><span class="idx-name">科创50</span><span class="idx-val">1916.21</span><span class="idx-chg dn">-1.68%</span></div>
+  <div class="divider"></div>
+  <div style="font-size:0.78em;color:#8b949e;margin-top:4px">2763涨 / 2642跌 · 指数失真，资金在换桌子</div>
+</div>
 
-        <hr>
+<!-- 二、情绪 -->
+<div class="card">
+  <div class="card-title">市场情绪</div>
+  <div class="emo-row"><span class="emo-label">成交额</span><span class="emo-val">3.47万亿</span><span class="emo-note">缩量2960亿</span></div>
+  <div class="emo-row"><span class="emo-label">涨停 / 跌停</span><span class="emo-val"><span class="up">70+</span> / <span class="dn">30+</span></span><span class="emo-note">游资活跃</span></div>
+  <div class="emo-row"><span class="emo-label">主力资金</span><span class="emo-val dn">-642亿</span><span class="emo-note">兑现有色半导</span></div>
+  <div class="emo-row"><span class="emo-label">北向资金</span><span class="emo-val dn">-32亿</span><span class="emo-note">减有色加医药</span></div>
+  <div class="emo-row"><span class="emo-label">恐贪指数</span><span class="emo-val" style="color:#ffa657">52 · 中性</span><span class="emo-note">回落16点</span></div>
+</div>
 
-        <h2>二、市场情绪</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>维度</th>
-                    <th>数据</th>
-                    <th>解读</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>上涨家数</td>
-                    <td>约2200家</td>
-                    <td>超四成个股上涨，结构分化明显</td>
-                </tr>
-                <tr>
-                    <td>下跌家数</td>
-                    <td>约2800家</td>
-                    <td>多数个股调整，赚钱效应集中</td>
-                </tr>
-                <tr>
-                    <td>涨停家数</td>
-                    <td>98只</td>
-                    <td>涨停数量尚可，资金活跃度高</td>
-                </tr>
-                <tr>
-                    <td>跌停家数</td>
-                    <td>10只</td>
-                    <td>跌停较少，市场恐慌情绪低</td>
-                </tr>
-                <tr>
-                    <td>两市成交额</td>
-                    <td>3.28万亿</td>
-                    <td>缩量上涨，资金谨慎乐观</td>
-                </tr>
-                <tr>
-                    <td>较前日</td>
-                    <td>-4.5%</td>
-                    <td>量能萎缩，观望情绪升温</td>
-                </tr>
-                <tr>
-                    <td>市场热度</td>
-                    <td>中性偏暖</td>
-                    <td>科技主线明确，但扩散不足</td>
-                </tr>
-                <tr>
-                    <td>资金集中度</td>
-                    <td>高度集中</td>
-                    <td>资金抱团科技龙头，中小票流动性不足</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- 三、板块 -->
+<div class="card">
+  <div class="card-title">板块异动</div>
+  <div style="font-size:0.78em;color:#8b949e;margin-bottom:6px">涨幅 TOP5</div>
+  <div class="sec-row"><span class="sec-rank">1</span><span class="sec-name">医药生物</span><span class="sec-chg up">+1.33%</span><span class="sec-note">创新药涨停潮</span></div>
+  <div class="sec-row"><span class="sec-rank">2</span><span class="sec-name">银行</span><span class="sec-chg up">+1.15%</span><span class="sec-note">低估值高股息</span></div>
+  <div class="sec-row"><span class="sec-rank">3</span><span class="sec-name">纺织服饰</span><span class="sec-chg up">+1.04%</span><span class="sec-note">防御属性</span></div>
+  <div class="sec-row"><span class="sec-rank">4</span><span class="sec-name">证券（分化）</span><span class="sec-chg up">+0.80%</span><span class="sec-note">长江2连板</span></div>
+  <div class="sec-row"><span class="sec-rank">5</span><span class="sec-name">猪肉/农业</span><span class="sec-chg up">+0.50%</span><span class="sec-note">超跌反弹</span></div>
+  <div style="font-size:0.78em;color:#8b949e;margin:8px 0 6px">跌幅 TOP5</div>
+  <div class="sec-row"><span class="sec-rank">1</span><span class="sec-name">有色金属</span><span class="sec-chg dn">-7.24%</span><span class="sec-note">美银喊加息重锤</span></div>
+  <div class="sec-row"><span class="sec-rank">2</span><span class="sec-name">电力设备</span><span class="sec-chg dn">-4.04%</span><span class="sec-note">光伏储能被赎回</span></div>
+  <div class="sec-row"><span class="sec-rank">3</span><span class="sec-name">国防军工</span><span class="sec-chg dn">-3.26%</span><span class="sec-note">半年末兑现</span></div>
+  <div class="sec-row"><span class="sec-rank">4</span><span class="sec-name">电子（半导）</span><span class="sec-chg dn">-3.10%</span><span class="sec-note">韩股熔断传导</span></div>
+  <div class="sec-row"><span class="sec-rank">5</span><span class="sec-name">计算机</span><span class="sec-chg dn">-2.50%</span><span class="sec-note">AI高位震荡</span></div>
+</div>
 
-        <hr>
+<!-- 四、资金 -->
+<div class="card">
+  <div class="card-title">资金流向</div>
+  <div style="font-size:0.78em;color:#3fb950;margin-bottom:6px">▲ 净流入 TOP5</div>
+  <div class="fund-row"><span class="fund-name">医药生物</span><span class="fund-val up">+58亿</span></div>
+  <div class="fund-row"><span class="fund-name">银行</span><span class="fund-val up">+43亿</span></div>
+  <div class="fund-row"><span class="fund-name">证券</span><span class="fund-val up">+19亿</span></div>
+  <div class="fund-row"><span class="fund-name">纺织服饰</span><span class="fund-val up">+8亿</span></div>
+  <div class="fund-row"><span class="fund-name">猪肉/农业</span><span class="fund-val up">+6亿</span></div>
+  <div style="font-size:0.78em;color:#f85149;margin:8px 0 6px">▼ 净流出 TOP5</div>
+  <div class="fund-row"><span class="fund-name">有色金属</span><span class="fund-val dn">-186亿</span></div>
+  <div class="fund-row"><span class="fund-name">电子（半导）</span><span class="fund-val dn">-129亿</span></div>
+  <div class="fund-row"><span class="fund-name">电力设备</span><span class="fund-val dn">-95亿</span></div>
+  <div class="fund-row"><span class="fund-name">国防军工</span><span class="fund-val dn">-46亿</span></div>
+  <div class="fund-row"><span class="fund-name">计算机</span><span class="fund-val dn">-39亿</span></div>
+</div>
 
-        <h2>三、板块异动</h2>
-        <h3>涨幅TOP5</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>排名</th>
-                    <th>板块</th>
-                    <th>涨跌幅</th>
-                    <th>逻辑</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>玻璃玻纤</td>
-                    <td class="up">+8.24%</td>
-                    <td>半导体材料需求爆发，产能紧缺推动涨价预期</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>半导体</td>
-                    <td class="up">+5.01%</td>
-                    <td>科创50单日暴涨4.91%，台积电涨价催化产业链</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>消费电子</td>
-                    <td class="up">+4.46%</td>
-                    <td>苹果产业链订单回暖，AI硬件需求持续</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>能源金属</td>
-                    <td class="up">+4.41%</td>
-                    <td>锂电材料价格企稳，下游需求边际改善</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>存储器</td>
-                    <td class="up">+4.08%</td>
-                    <td>存储芯片涨价周期开启，供需格局优化</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- 五、消息 -->
+<div class="card">
+  <div class="card-title">重大消息</div>
+  <div class="news-item"><h3>美银喊加息三次</h3><p>9/10/12月各加25bp，最激进预测。<span class="news-tag">影响：</span>金价跳水，A股有色重挫。但油价已从115跌到78——<span class="news-tag">市场把最坏预测当事实定价了</span>。</p></div>
+  <div class="news-item"><h3>韩国KOSPI跌9.99%熔断</h3><p>三星-12%、SK海力士-12%，创08年来最大跌幅。<span class="news-tag">影响：</span>A股CPO/PCB午后同步跳水，情绪沿产业链传导。</p></div>
+  <div class="news-item"><h3>达沃斯论坛开幕+科创板扩围</h3><p>总理致辞释放开放信号，科创板纳入AI大模型和量子科技。<span class="news-tag">影响：</span>今天被情绪掩盖，明天企稳可能激活。</p></div>
+</div>
 
-        <h3>跌幅TOP5</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>排名</th>
-                    <th>板块</th>
-                    <th>涨跌幅</th>
-                    <th>逻辑</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>证券Ⅱ</td>
-                    <td class="down">-2.01%</td>
-                    <td>券商板块调整，市场成交量能不足拖累佣金预期</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>电力</td>
-                    <td class="down">-1.51%</td>
-                    <td>夏季用电高峰预期兑现，获利盘回吐</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>煤炭</td>
-                    <td class="down">-1.20%</td>
-                    <td>能源板块轮动调整，资金流出传统周期</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>银行</td>
-                    <td class="down">-0.85%</td>
-                    <td>金融板块疲弱，利率预期压制估值</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>房地产</td>
-                    <td class="down">-0.72%</td>
-                    <td>政策刺激边际减弱，基本面修复缓慢</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- 六、点评 -->
+<div class="card">
+  <div class="card-title">大王点评</div>
+  <div class="opinion"><b>趋势：</b>不是走熊，是结构性回调+风格切换。4080是关键支撑，跌破看4050。</div>
+  <div class="opinion"><b>情绪：</b>涨跌家数接近平衡，资金在换桌子不是离场。中信净空7万手，短期偏震荡。</div>
+  <div class="opinion"><b>主线：</b>旧主线（有色/半导）瓦解中，新主线（医药/银行/低位券商）形成中。达沃斯+科创扩围是潜在催化。</div>
+  <div class="opinion"><b>风险：</b>高位回调可能没完，外围扰动持续，半年末流动性偏紧。</div>
+</div>
 
-        <hr>
+<!-- 七、速览 -->
+<div class="card">
+  <div class="card-title">持仓速览</div>
+  <div class="watch-row"><span class="watch-name">上证指数</span><span class="watch-chg dn">-1.37%</span><span class="watch-sig">险守4100</span></div>
+  <div class="watch-row"><span class="watch-name">创业板指</span><span class="watch-chg dn">-3.84%</span><span class="watch-sig">等企稳信号</span></div>
+  <div class="watch-row"><span class="watch-name">证券ETF</span><span class="watch-chg up">+0.8%</span><span class="watch-sig">内部分化</span></div>
+  <div class="watch-row"><span class="watch-name">医药ETF</span><span class="watch-chg up">+1.3%</span><span class="watch-sig">避险首选</span></div>
+  <div class="watch-row"><span class="watch-name">银行ETF</span><span class="watch-chg up">+1.1%</span><span class="watch-sig">防御力强</span></div>
+  <div class="watch-row"><span class="watch-name">金钼股份</span><span class="watch-chg dn">-8%</span><span class="watch-sig">有色拖累</span></div>
+</div>
 
-        <h2>四、热门涨停题材</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>题材</th>
-                    <th>涨停数</th>
-                    <th>核心逻辑</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>半导体芯片</td>
-                    <td>约25只</td>
-                    <td>台积电涨价传导+国产替代加速+AI算力需求爆发，长电科技、兆易创新、中芯国际领涨</td>
-                </tr>
-                <tr>
-                    <td>玻璃玻纤</td>
-                    <td>约8只</td>
-                    <td>半导体上游材料国产替代，中国巨石、彩虹股份等受益于产能紧缺</td>
-                </tr>
-                <tr>
-                    <td>消费电子</td>
-                    <td>约6只</td>
-                    <td>苹果WWDC后订单预期上调，立讯精密、歌尔股份等龙头获资金追捧</td>
-                </tr>
-                <tr>
-                    <td>存储器</td>
-                    <td>约5只</td>
-                    <td>三星、海力士减产效应显现，存储芯片价格进入上行周期</td>
-                </tr>
-                <tr>
-                    <td>通信设备</td>
-                    <td>约4只</td>
-                    <td>5.5G建设加速+国产替代，中天科技、亨通光电等受益于订单释放</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- 八、策略 -->
+<div class="card">
+  <div class="card-title">明日策略</div>
+  <div class="strat-note">可关注：</div>
+  <div class="strat-good">· 医药、银行、低位证券</div>
+  <div class="strat-good">· 达沃斯催化硬科技、储能</div>
+  <div class="strat-good">· 科创板扩围催化AI大模型</div>
+  <div class="strat-note" style="margin-top:8px">暂时回避：</div>
+  <div class="strat-bad">· 高位有色贵金属（加息预期未消化）</div>
+  <div class="strat-bad">· 高位半导体/PCB（韩股传导未完）</div>
+  <div class="strat-bad">· 高位光伏储能（资金切换赛道）</div>
+  <div class="strat-note" style="margin-top:8px">仓位：</div>
+  <div style="font-size:0.84em;color:#c9d1d9">5-6成，不抄底高位。企稳加7成，继续跌退4成。</div>
+</div>
 
-        <hr>
+<!-- 大王金句 -->
+<div class="king-quote">
+  <div class="bolt">⚡ 大王一句话</div>
+  <div class="text">跌的是指数不是市场，<br>砸的是高位不是所有。<br>别慌别贪，盯着资金流向走。</div>
+</div>
 
-        <h2>五、行业资金流向</h2>
-        <h3>净流入TOP5</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>排名</th>
-                    <th>行业</th>
-                    <th>净流入</th>
-                    <th>龙头股</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>电子</td>
-                    <td class="up">+242.38亿</td>
-                    <td>长电科技、兆易创新、中芯国际</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>半导体</td>
-                    <td class="up">+182.10亿</td>
-                    <td>北方华创、中微公司、长川科技</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>消费电子</td>
-                    <td class="up">+89.50亿</td>
-                    <td>立讯精密、歌尔股份、蓝思科技</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>通信设备</td>
-                    <td class="up">+56.20亿</td>
-                    <td>中兴通讯、中天科技、亨通光电</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>计算机</td>
-                    <td class="up">+43.80亿</td>
-                    <td>用友网络、金山办公、恒生电子</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="footer">数据：东方财富/百家号/财联社 · ETF大王 · 仅供参考</div>
 
-        <h3>净流出TOP5</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>排名</th>
-                    <th>行业</th>
-                    <th>净流出</th>
-                    <th>原因</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>证券</td>
-                    <td class="down">-68.50亿</td>
-                    <td>券商板块调整，资金撤离金融权重</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>电力</td>
-                    <td class="down">-52.30亿</td>
-                    <td>夏季用电高峰预期兑现，获利盘出逃</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>煤炭</td>
-                    <td class="down">-38.70亿</td>
-                    <td>能源板块轮动，资金转向科技成长</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>银行</td>
-                    <td class="down">-31.20亿</td>
-                    <td>金融板块整体疲弱，机构减配</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>房地产</td>
-                    <td class="down">-25.80亿</td>
-                    <td>政策刺激边际减弱，基本面承压</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <hr>
-
-        <h2>六、重大消息面</h2>
-        <div class="news-item">
-            <strong>1. 财政部：2026年继续实施更加积极的财政政策</strong>
-            <p>报告明确继续实施更加积极的财政政策，前5个月财政收支运行总体平稳。财政部门将继续推动扩大内需和优化供给，对基建、消费、科技形成基本面支撑。</p>
-            <p><strong>影响分析</strong>：正面利好基建、消费、科技板块，政策红利持续释放，市场流动性环境保持宽松。</p>
-        </div>
-        
-        <div class="news-item">
-            <strong>2. 央行、金融监管总局、全国妇联联合印发金融支持妇女就业发展意见</strong>
-            <p>6月23日，三部门联合印发《关于进一步加强金融支持妇女就业发展的实施意见》，共提出17条具体措施，涵盖创业担保贷款、普惠金融、职业技能培训等方面。</p>
-            <p><strong>影响分析</strong>：中长期利好消费金融、普惠金融板块，促进消费复苏和就业稳定。</p>
-        </div>
-        
-        <div class="news-item">
-            <strong>3. 9部门重磅发布汽车后市场政策，利好汽车改装、房车露营、汽车赛事</strong>
-            <p>9部门联合发文推动汽车后市场发展，明确支持汽车改装、房车露营、汽车赛事三大方向，从"堵点"到"增量"全面疏通产业链。</p>
-            <p><strong>影响分析</strong>：直接利好汽车服务、零部件、旅游休闲板块，政策红利释放新增长点。</p>
-        </div>
-        
-        <div class="news-item">
-            <strong>4. 台积电推动涨价，中芯国际涨超7%</strong>
-            <p>台积电宣布上调代工价格，传导至国内半导体产业链。中芯国际、华虹半导体等国内晶圆厂跟涨预期升温，半导体设备、材料板块集体爆发。</p>
-            <p><strong>影响分析</strong>：强势利好半导体全产业链，国产替代加速，设备、材料、封测均受益。</p>
-        </div>
-        
-        <div class="news-item">
-            <strong>5. 上海黄金交易所调整黄金、白银延期合约保证金比例</strong>
-            <p>自6月24日收盘清算时起，中行黄金延期合约保证金比例由99.9%调整为120%，白银延期合约保证金比例由99.96%调整为对应调整。意在防范贵金属价格波动风险。</p>
-            <p><strong>影响分析</strong>：短期利空贵金属板块，资金风险偏好转向风险资产（科技股）。</p>
-        </div>
-
-        <hr>
-
-        <h2>七、详细市场点评</h2>
-        <p><strong>趋势研判</strong>：6月24日A股走出"指数分化、结构极致"的行情。科创50单日暴涨4.91%，半导体板块掀涨停潮，而上证指数仅微涨0.51%，深成指、创业板指涨幅也在1.7%左右。这种分化背后，是资金高度集中于科技主线的结果——全市场涨停98只，但约2800家个股下跌，说明赚钱效应极其集中，中小票流动性被虹吸。趋势上，科技主线（半导体、消费电子、存储器）已经进入加速段，但需警惕短期冲高回落风险。</p>
-        
-        <p><strong>情绪分析</strong>：市场情绪整体偏暖，但存在隐忧。涨停家数98只说明活跃度不低，跌停仅10只说明恐慌情绪低；但两市成交3.28万亿，较前日缩量4.5%，说明资金观望情绪升温，增量资金入场谨慎。更重要的是，涨跌家数比约0.79:1，说明大部分个股并未跟随指数上涨，市场"虚假繁荣"的成分存在。情绪上处于"谨慎乐观"区间，尚未到狂热阶段，但也需防范量能持续萎缩带来的调整压力。</p>
-        
-        <p><strong>主线逻辑</strong>：当前市场主线极度清晰——半导体产业链。从玻璃玻纤（上游材料）到半导体设备、芯片设计、封测（中游制造），再到消费电子、存储器（下游应用），全产业链共振上涨。核心催化有三：①台积电涨价传导至国产供应链；②AI算力需求爆发带动芯片需求；③国产替代政策持续推进。这条主线短期内难以证伪，但涨幅过大后需警惕获利盘回吐。次主线是汽车后市场（政策驱动）和通信设备（5.5G建设），但强度和持续性弱于半导体。</p>
-        
-        <p><strong>资金动向</strong>：资金流向极度分化。电子（半导体）单日净流入242.38亿，半导体板块净流入182.10亿，两块合计超过400亿，占全市场净流入的绝大部分。而证券、电力、煤炭、银行、房地产五大传统板块合计净流出超过200亿，资金"弃旧迎新"格局明显。这种资金腾挪背后，是机构对科技成长的中长期增配，以及对传统周期、金融权重的减配。值得注意的是，北向资金6月24日动向尚需观察，若外资同步加仓科技，则主线确定性更强。</p>
-        
-        <p><strong>风险提示</strong>：当前市场存在三大风险：①量能萎缩。成交3.28万亿较前日缩量4.5%，若持续缩量，指数上攻动能将受限，甚至引发回调。②结构极致。资金过度集中于科技龙头，中小票流动性不足，一旦龙头调整，容易引发连锁反应。③外部扰动。美股科技股估值高企，若美联储加息预期升温或美股调整，可能传导至A股科技板块。建议控制仓位，不追高，等待回调低吸机会。</p>
-
-        <hr>
-
-        <h2>八、持仓速览</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>标的</th>
-                    <th>涨跌幅</th>
-                    <th>信号</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>证券ETF(512880)</td>
-                    <td class="down">-2.01%</td>
-                    <td>券商板块调整，awaiting 政策催化，暂持有观察</td>
-                </tr>
-                <tr>
-                    <td>光云科技(688365)</td>
-                    <td class="up">+1.20%</td>
-                    <td>科创板整体强势，但个股弹性不足，关注季报业绩</td>
-                </tr>
-                <tr>
-                    <td>振华新材(688707)</td>
-                    <td class="up">+4.41%</td>
-                    <td>能源金属板块受益，锂电材料价格企稳，持有</td>
-                </tr>
-                <tr>
-                    <td>金钼股份(601958)</td>
-                    <td class="down">-1.85%</td>
-                    <td>钼价高位震荡，板块调整，等待低吸机会</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <hr>
-
-        <h2>九、明日策略</h2>
-        <h3>关注方向</h3>
-        <ul>
-            <li><strong>半导体产业链</strong>：若明日科创50继续放量上攻，可关注设备、材料、封测龙头低吸机会，但切忌追高</li>
-            <li><strong>汽车后市场</strong>：9部门政策红利释放，关注汽车服务、零部件板块补涨机会</li>
-            <li><strong>通信设备</strong>：5.5G建设加速，中天科技、亨通光电等订单释放，可适量配置</li>
-        </ul>
-        
-        <h3>回避方向</h3>
-        <ul>
-            <li><strong>证券板块</strong>：成交量能不足，券商佣金预期下修，短期回避</li>
-            <li><strong>传统周期</strong>：煤炭、电力、房地产等板块资金持续流出，暂不介入</li>
-            <li><strong>高位连板股</strong>：部分半导体龙头短期涨幅过大，追高风险极高，等待回调</li>
-        </ul>
-        
-        <h3>仓位建议</h3>
-        <ul>
-            <li><strong>激进型</strong>：仓位60-70%，重点配置半导体产业链龙头，设置止损线</li>
-            <li><strong>稳健型</strong>：仓位40-50%，均衡配置科技+消费，不追高</li>
-            <li><strong>保守型</strong>：仓位20-30%，观望为主，等待量能回升再介入</li>
-        </ul>
-
-        <hr>
-
-        <blockquote>
-            <p><strong>大王一句话收尾：</strong></p>
-            <p>科技主线极致演绎，但量能萎缩是隐忧；不追高、等回调、控制仓位，才是穿越震荡的长久之道。明日若科创50继续放量，可低吸设备材料龙头；若缩量调整，则继续观望。记住：牛市多急跌，熊市多急涨，当下既不是牛市也不是熊市，而是结构市——选对方向比满仓更重要。</p>
-        </blockquote>
-
-        <div class="footer">
-            <p>数据来源：腾讯自选股、东方财富、百度股市通、金融界</p>
-            <p>免责声明：本文仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
-            <p>大王出品 | 2026年6月24日</p>
-        </div>
-    </div>
 </body>
 </html>
