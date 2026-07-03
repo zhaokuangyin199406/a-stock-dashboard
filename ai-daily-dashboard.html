@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 日报 · 2026年7月3日</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; min-height: 100vh; }
+a { color: #58a6ff; text-decoration: none; transition: color .2s; }
+a:hover { color: #79c0ff; }
+.container { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+/* Hero */
+.hero { text-align: center; padding: 40px 0 28px; border-bottom: 1px solid #21262d; }
+.hero h1 { font-size: 32px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
+.hl-red { color: #f85149; }
+.hl-green { color: #3fb950; }
+.hero .date { font-size: 14px; color: #8b949e; margin-bottom: 12px; }
+.hero .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; font-size: 13px; color: #8b949e; }
+.hero .stats-row .stat { display: flex; align-items: center; gap: 4px; }
+.hero .stats-row .num { color: #e6edf3; font-weight: 600; }
+
+/* Nav */
+nav { position: sticky; top: 0; z-index: 100; background: #0d1117; padding: 12px 0; border-bottom: 1px solid #21262d; display: flex; flex-wrap: wrap; gap: 4px; }
+nav a { display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 20px; font-size: 13px; color: #8b949e; transition: all .2s; white-space: nowrap; }
+nav a:hover, nav a:focus { background: #161b22; color: #e6edf3; }
+
+/* Section */
+.section { padding: 24px 0 8px; }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.section-header h2 { font-size: 18px; font-weight: 600; }
+.section-header .badge { font-size: 12px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
+.badge-s0 { background: rgba(248,81,73,.15); color: #f85149; }
+.badge-s1 { background: rgba(88,166,255,.15); color: #58a6ff; }
+.badge-s2 { background: rgba(210,153,34,.15); color: #d29922; }
+.badge-s3 { background: rgba(63,185,80,.15); color: #3fb950; }
+.badge-s4 { background: rgba(163,113,247,.15); color: #a371f7; }
+
+/* Card Grid */
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 640px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Card */
+.card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; overflow: hidden; transition: border-color .2s, box-shadow .2s; position: relative; }
+.card:hover { border-color: #30363d; box-shadow: 0 4px 16px rgba(0,0,0,.4); }
+.card-body { padding: 18px 20px; }
+.card-index { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 6px; background: #21262d; color: #8b949e; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+.card-title { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; display: block; }
+.card-title a { color: #e6edf3; }
+.card-title a:hover { color: #58a6ff; }
+.card-source { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 2px 8px; border-radius: 10px; background: rgba(88,166,255,.1); color: #58a6ff; margin-bottom: 8px; }
+.card-summary { font-size: 13px; color: #8b949e; line-height: 1.65; }
+.card-link { display: inline-block; font-size: 12px; color: #8b949e; margin-top: 10px; }
+.card-link:hover { color: #58a6ff; }
+
+/* Empty */
+.empty-section { text-align: center; padding: 32px 0; color: #484f58; font-size: 14px; grid-column: 1 / -1; }
+
+/* Footer */
+.footer { text-align: center; padding: 32px 0 48px; color: #484f58; font-size: 13px; border-top: 1px solid #21262d; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1><span class="hl-red">AI</span> <span class="hl-green">HOT</span></h1>
+  <div class="date" id="heroDate"></div>
+  <div class="stats-row" id="heroStats"></div>
+</div>
+<nav id="nav"></nav>
+<div class="container" id="app"></div>
+<div class="footer" id="footer"></div>
+
+<script>
+const DATA = {"date":"2026年7月3日 · 星期五","sections":[{"label":"模型发布/更新","icon":"🧠","colorClass":"s0","items":[]},{"label":"产品发布/更新","icon":"🚀","colorClass":"s1","items":[{"title":"AI 版支付宝开放公测，蚂蚁阿宝无需邀请码即可体验","summary":"支付宝阿宝 AI 助手今日正式开放公测，iOS 和安卓用户可在应用商店或支付宝 App 搜索"阿宝"直接体验。","source":"IT之家","url":"https://www.ithome.com/0/971/469.htm"},{"title":"Google Health API 推出 CLI：ghealth 开源工具","summary":"ghealth 是一款封装 Google Health API v4 的开源命令行工具，以单个 Go 二进制文件发布。","source":"MarkTechPost","url":"https://www.marktechpost.com/2026/07/02/the-google-health-api-got-a-cli-ghealth-is-an-open-source-tool-for-your-fitbit-air-data"},{"title":"Senior SWE-Bench：评估 AI 智能体高级工程师能力","summary":"开源基准测试评估 AI 智能体完成高级软件工程师级别任务的能力，Claude Opus 4.8 通过率 24%。","source":"Hacker News","url":"https://senior-swe-bench.snorkel.ai/"},{"title":"Kimi K2.7 Code 在 GitHub Copilot 上正式发布","summary":"Kimi K2.7 Code 开源权重模型已在 GitHub Copilot 中正式可用，成为 Copilot 首个可选开源权重模型。","source":"GitHub Blog","url":"https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot"},{"title":"阿里巴巴发布 Page Agent：开源 DOM 自然语言操控库","summary":"阿里巴巴发布 Page Agent，一个嵌入网页后可通过自然语言指令直接操作 DOM 元素的开源 JavaScript 库。","source":"MarkTechPost","url":"https://www.marktechpost.com/2026/07/02/meet-alibabas-page-agent-a-javascript-in-page-gui-agent-that-controls-web-interfaces-with-natural-language-through-the-dom"},{"title":"昆仑万维天工 3.2 发布 Skywork Tags","summary":"将 AI 智能体以团队成员身份接入 Slack、飞书、钉钉等即时通讯工具，可在群中 @Skywork 参与讨论。","source":"昆仑万维","url":"https://mp.weixin.qq.com/s/OqL6ID-mAel8XN-slYgXOA"},{"title":"Claude Enterprise 新增用量与成本分析及支出管控","summary":"Claude Enterprise 推出更丰富的管理分析工具和成本控制功能，含仪表板和 Analytics API。","source":"Claude Blog","url":"https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend"}]},{"label":"行业动态","icon":"🏭","colorClass":"s2","items":[{"title":"Microsoft 成立 Frontier Company，斥资 25 亿美元派驻 6000 名 AI 工程师","summary":"Microsoft 新设业务部门 Frontier Company，拨款 25 亿美元，将 6000 名行业与工程专家派驻企业客户现场。","source":"The Decoder","url":"https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients"},{"title":"Anthropic 与五角大楼控权之争：Claude 军事用途护栏分歧","summary":"WSJ 法庭文件显示 Anthropic CEO 与五角大楼副部长在 Claude 军事用途护栏上存在核心分歧。","source":"X (Kim)","url":"https://x.com/kimmonismus/status/2072718147279335507"},{"title":"OpenAI 提议美国政府持股 5%，估值 426 亿美元","summary":"OpenAI 提议向美国政府提供公司 5% 的股份，按近期 8520 亿美元估值计算价值约 426 亿美元。","source":"Testing Catalog","url":"https://x.com/testingcatalog/status/2072585845542969583"},{"title":"花旗、Adobe 等企业限制员工使用 AI 旗舰模型以控制成本","summary":"Atlassian、Adobe、亚马逊等六家企业正限制员工使用 AI 工具，要求改用能力较低的大模型避免成本失控。","source":"IT之家","url":"https://www.ithome.com/0/971/937.htm"},{"title":"快手可灵 AI 获 20.28 亿美元注资，投后估值 180 亿美元","summary":"21 名初始投资者以 138.24 亿元人民币现金注资北京可灵，快手预计 12 个月内启动可灵 AI 赴港上市。","source":"IT之家","url":"https://www.ithome.com/0/971/954.htm"},{"title":"谷歌 AI 建设导致 2025 年用电量增长 37%","summary":"2025 年谷歌年度用电量同比上涨 37%，数据中心全年消耗超 4200 万兆瓦时，创历史最大增幅。","source":"Ars Technica","url":"https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025"}]},{"label":"论文研究","icon":"📄","colorClass":"s3","items":[{"title":"关于 Mythos 和网络安全的讨论并非炒作","summary":"关于 Mythos 和网络安全的讨论并非炒作，正如任何使用 Fable 进行自主工作的人可能已经认识到的那样。","source":"Ethan Mollick","url":"https://x.com/emollick/status/2072778376494895139"},{"title":"多智能体团队阻碍专家发挥","summary":"在自我组织的多智能体 LLM 系统中，团队无法有效利用专家成员的专业知识，性能损失最高达 41.1%。","source":"Apple Research","url":"https://machinelearning.apple.com/research/multi-agent-teams-experts"},{"title":"RL 微调 VLM 的鲁棒性与思维链一致性研究","summary":"强化学习微调被扩展至视觉语言模型，研究发现文本扰动会显著降低模型鲁棒性和置信度。","source":"Apple Research","url":"https://machinelearning.apple.com/research/robustness-chain-thought-consistency"},{"title":"VideoFlexTok：可变长度粗到细视频分词","summary":"提出可变长度 token 序列的视频表示方法，以 1.1B 参数达到与 5.2B 模型相当的视频生成质量。","source":"Apple Research","url":"https://machinelearning.apple.com/research/videoflextok"}]},{"label":"技巧与观点","icon":"💡","colorClass":"s4","items":[{"title":"browser-use 发布开源 AI 视频剪辑 Skill「video-use」","summary":"browser-use 团队推出面向 AI 编码智能体的开源 Skill，让 LLM 通过 ElevenLabs Scribe 进行音频转写。","source":"X 邵猛","url":"https://x.com/shao__meng/status/2072644710523691110"},{"title":"Emil Kowalski 发布设计工程师 Skills","summary":"将多年 UI/动画原则沉淀为三个 Skill，使 AI 编码工具具备资深设计工程师的审美判断。","source":"X 邵猛","url":"https://x.com/shao__meng/status/2072484635955900792"},{"title":"Fable 5 在 RLI 基准中达成 16.1% 自动化率","summary":"Fable 5 自动化率达 16.1%，是八个月前最佳系统 2.5% 的六倍多，超过 Opus 4.8（8.3%）和 GPT-5.5（6.3%）。","source":"The Decoder","url":"https://the-decoder.com/ai-agents-can-now-complete-16-percent-of-freelance-jobs-at-pro-quality-up-from-2-5-percent-eight-months-ago"},{"title":"Fable 5 仅 4.44 美元搭建 Rube Goldberg 机器","summary":"用 Fable 5 构建的鲁布·戈德堡机械仅需 4.44 美元。","source":"OpenRouter","url":"https://x.com/OpenRouter/status/2072738704922439689"},{"title":"千问团队朱达：C端 Agent 的工程哲学与主动服务探索","summary":"千问团队总结"多快好省"方法论，探索从被动响应转向主动服务的 Agent 工程。","source":"千问APP (阿里)","url":"https://mp.weixin.qq.com/s/l70iUM0bIpG9EdV9Px7QPQ"},{"title":"Agent 辅助的 SGLang 开发：初步探索","summary":"SGLang 团队将工作流编码为可执行的 SKILL.md 文件、脚本、基准合约和审查循环。","source":"LMSYS Blog","url":"https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development"},{"title":"借用夜晚：将闲置推理 GPU 回收用于研究","summary":"Runway 开发 deckard 容量控制器，在生产推理集群与研究集群间动态重分配 GPU。","source":"Runway News","url":"https://runwayml.com/news/borrowing-the-night-reclaiming-idle-inference-gpus-for-research"}]}]};
+
+const LABEL_ORDER = ["模型发布/更新","产品发布/更新","行业动态","论文研究","技巧与观点"];
+const ICONS = {"模型发布/更新":"🧠","产品发布/更新":"🚀","行业动态":"🏭","论文研究":"📄","技巧与观点":"💡"};
+const COLOR_MAP = {"模型发布/更新":"s0","产品发布/更新":"s1","行业动态":"s2","论文研究":"s3","技巧与观点":"s4"};
+
+function truncateSummary(text, maxLen) {
+  if (!text || text.length <= maxLen) return text || '';
+  return text.slice(0, maxLen) + '…';
+}
+
+function render() {
+  const nav = document.getElementById('nav');
+  const app = document.getElementById('app');
+  const heroDate = document.getElementById('heroDate');
+  const heroStats = document.getElementById('heroStats');
+  const footer = document.getElementById('footer');
+
+  heroDate.textContent = DATA.date;
+
+  let totalItems = 0;
+  const sectionCounts = {};
+  DATA.sections.forEach(s => { sectionCounts[s.label] = s.items.length; totalItems += s.items.length; });
+
+  const statHTML = Object.entries(sectionCounts).map(([k,v]) =>
+    `<span class="stat">${ICONS[k]||''} <span class="num">${v}</span> ${k}</span>`
+  ).join('');
+  heroStats.innerHTML = `<span class="stat">📊 <span class="num">${totalItems}</span> 条</span>` + statHTML;
+
+  nav.innerHTML = `<div class="container" style="display:flex;flex-wrap:wrap;gap:4px">${DATA.sections.filter(s => s.items.length).map(s =>
+    `<a href="#sec-${s.label}">${ICONS[s.label]||''} ${s.label}</a>`
+  ).join('')}</div>`;
+
+  let globalIdx = 0;
+  let html = '';
+
+  // Reorder sections to match LABEL_ORDER
+  const orderedSections = LABEL_ORDER.map(label => {
+    const found = DATA.sections.find(s => s.label === label);
+    return found || { label, icon: ICONS[label], colorClass: COLOR_MAP[label], items: [] };
+  });
+
+  orderedSections.forEach((sec, si) => {
+    const cc = COLOR_MAP[sec.label] || 's0';
+    const icon = ICONS[sec.label] || '';
+    html += `<div class="section" id="sec-${sec.label}">`;
+    html += `<div class="section-header"><h2>${icon} ${sec.label}</h2><span class="badge badge-${cc}">${sec.items.length}</span></div>`;
+    html += `<div class="card-grid">`;
+
+    if (sec.items.length === 0) {
+      html += `<div class="empty-section">暂无内容</div>`;
+    } else {
+      sec.items.forEach(item => {
+        globalIdx++;
+        html += `<div class="card"><div class="card-body">`;
+        html += `<div class="card-index">${globalIdx}</div>`;
+        html += `<div class="card-title"><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+        if (item.source) html += `<div class="card-source">📡 ${item.source}</div>`;
+        html += `<div class="card-summary">${truncateSummary(item.summary, 60)}</div>`;
+        html += `<a class="card-link" href="${item.url}" target="_blank" rel="noopener">查看原文 →</a>`;
+        html += `</div></div>`;
+      });
+    }
+    html += `</div></div>`;
+  });
+
+  app.innerHTML = html;
+
+  footer.innerHTML = `共 ${totalItems} 条 · 数据来源 <a href="https://aihot.virxact.com" target="_blank" rel="noopener">AI HOT</a>`;
+}
+
+render();
+</script>
+</body>
+</html>
