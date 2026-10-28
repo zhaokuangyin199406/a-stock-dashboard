@@ -3,289 +3,278 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A股复盘看板 2026-10-27 周二 · 全球普涨·A股独跌</title>
+<title>A股复盘看板 2026-10-28 周三 · 高低切换的反向一天</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:#0a0e17;color:#c9d1d9;font-size:13px;line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;padding:10px 8px 26px}
+body{background:#0a0e17;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:13px;line-height:1.7;padding:12px 10px 40px}
 .wrap{max-width:420px;margin:0 auto}
-.hd{text-align:center;padding:16px 12px 14px;border-bottom:1px solid #21262d;margin-bottom:12px}
-.hd h1{font-size:19px;color:#ffa657;font-weight:700;letter-spacing:.5px}
-.hd .sub{font-size:12px;color:#8b949e;margin-top:5px}
-.hd .tag{display:inline-block;margin-top:9px;font-size:11px;color:#ffa657;border:1px solid #ffa65755;border-radius:10px;padding:1px 10px;background:#ffa65712}
-.card{background:#161b22;border:1px solid #21262d;border-radius:9px;padding:13px 13px 14px;margin-bottom:11px}
-.card h2{font-size:13.5px;color:#ffa657;font-weight:700;margin-bottom:9px;display:flex;align-items:flex-start;gap:6px;line-height:1.45}
-.card h2 span.no{font-size:10.5px;color:#0a0e17;background:#ffa657;border-radius:4px;padding:1px 5px;font-weight:800;flex:none;margin-top:2px}
-table{width:100%;border-collapse:collapse;margin:6px 0 8px;font-size:12.5px}
-th{color:#8b949e;font-weight:600;text-align:left;padding:4px 3px;border-bottom:1px solid #21262d;font-size:11.5px}
-td{padding:4px 3px;border-bottom:1px solid #1b2028;vertical-align:top}
+.hd{text-align:center;padding:14px 0 16px;border-bottom:1px solid #21262d;margin-bottom:14px}
+.hd h1{font-size:19px;color:#e6edf3;font-weight:700;letter-spacing:.5px}
+.hd .sub{font-size:11px;color:#8b949e;margin-top:6px;letter-spacing:1px}
+.hd .tag{display:inline-block;margin-top:9px;font-size:11px;padding:3px 11px;border-radius:11px;background:rgba(248,81,73,.13);color:#f85149;border:1px solid rgba(248,81,73,.3)}
+.card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:13px 12px;margin-bottom:11px}
+.ttl{display:flex;align-items:center;gap:8px;margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid #21262d}
+.ttl .no{font-size:11px;font-weight:700;color:#0a0e17;background:#ffa657;border-radius:4px;padding:1px 6px;letter-spacing:.5px}
+.ttl .nm{font-size:14px;font-weight:700;color:#e6edf3}
+.ttl .ex{margin-left:auto;font-size:10px;color:#6e7681}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{font-size:10.5px;color:#6e7681;font-weight:400;text-align:right;padding:4px 0;border-bottom:1px solid #21262d}
+th:first-child{text-align:left}
+td{padding:5px 0;text-align:right;border-bottom:1px solid rgba(33,38,45,.55);font-variant-numeric:tabular-nums}
+td:first-child{text-align:left;color:#c9d1d9}
 tr:last-child td{border-bottom:none}
-.r{text-align:right}
-.c{text-align:center}
-.up{color:#f85149;font-weight:600}
-.dn{color:#3fb950;font-weight:600}
-.flat{color:#8b949e}
-.hl{color:#ffa657;font-weight:600}
-.mut{color:#8b949e}
-.mark{background:#ffa6571f;border-left:2px solid #ffa657;padding:5px 8px;border-radius:0 5px 5px 0;margin:7px 0;font-size:12.5px;color:#e6d3b3}
-.li{padding-left:14px;position:relative;margin-bottom:6px;font-size:12.5px}
-.li:before{content:"·";position:absolute;left:4px;color:#ffa657;font-weight:800}
-.note{font-size:11.5px;color:#8b949e;margin-top:7px;padding-top:7px;border-top:1px dashed #21262d;line-height:1.6}
-.q{background:linear-gradient(135deg,#161b22,#1c2330);border:1px solid #ffa65744;border-radius:9px;padding:15px 14px;text-align:center;margin-bottom:11px}
-.q p{font-size:14px;color:#ffa657;font-weight:700;line-height:1.75}
-.ft{text-align:center;font-size:11px;color:#6b7280;margin-top:14px;line-height:1.7}
-h3.sec{font-size:12.5px;color:#ffa657;font-weight:700;margin:10px 0 4px}
-.kpi{display:flex;gap:6px;margin:7px 0 4px;flex-wrap:wrap}
-.kpi div{flex:1;min-width:0;background:#0f141c;border:1px solid #21262d;border-radius:6px;padding:6px 4px;text-align:center}
-.kpi b{display:block;font-size:14px;font-weight:800;line-height:1.35}
-.kpi i{font-style:normal;font-size:10px;color:#8b949e;display:block;margin-top:1px}
-.sm{font-size:11.5px;color:#8b949e}
-.news{border-left:2px solid #ffa65755;padding-left:9px;margin-bottom:11px}
-.news .t{color:#ffa657;font-weight:700;font-size:12.5px;margin-bottom:3px}
-.news .b{font-size:12.5px;line-height:1.72}
-.p{font-size:12.5px;line-height:1.75;margin-bottom:8px}
-.p b{color:#ffa657}
+.up{color:#f85149}.dn{color:#3fb950}.fl{color:#8b949e}
+.hl{color:#ffa657}
+.b{font-weight:700}
+.dim{color:#8b949e;font-size:11.5px}
+.kv{display:flex;justify-content:space-between;padding:4.5px 0;border-bottom:1px solid rgba(33,38,45,.55);font-size:12px}
+.kv:last-child{border-bottom:none}
+.kv .k{color:#8b949e}
+.kv .v{font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin-top:10px;padding:9px 10px;background:rgba(255,166,87,.07);border-left:2px solid #ffa657;border-radius:0 5px 5px 0;font-size:11.5px;line-height:1.75;color:#b9c2cc}
+.note b{color:#ffa657}
+.note .y{background:rgba(255,166,87,.19);color:#ffcb8a;padding:0 3px;border-radius:2px}
+p.txt{font-size:12.5px;line-height:1.82;color:#b9c2cc;margin-bottom:9px}
+p.txt:last-child{margin-bottom:0}
+p.txt b{color:#e6edf3}
+.lbl{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:3px;margin-right:6px;font-weight:700;vertical-align:1px}
+.l1{background:rgba(248,81,73,.16);color:#f85149}
+.l2{background:rgba(255,166,87,.16);color:#ffa657}
+.l3{background:rgba(139,148,158,.16);color:#8b949e}
+.l4{background:rgba(63,185,80,.16);color:#3fb950}
+.news{padding:9px 0;border-bottom:1px solid rgba(33,38,45,.7)}
+.news:last-child{border-bottom:none;padding-bottom:0}
+.news h4{font-size:12.5px;color:#e6edf3;font-weight:700;margin-bottom:5px;line-height:1.6}
+.news p{font-size:11.5px;color:#9aa4af;line-height:1.75}
+.news .imp{color:#ffcb8a}
+.strat{margin-bottom:9px;padding:9px 10px;border-radius:6px;font-size:11.5px;line-height:1.75}
+.s1{background:rgba(248,81,73,.08);border-left:2px solid #f85149}
+.s2{background:rgba(63,185,80,.08);border-left:2px solid #3fb950}
+.s3{background:rgba(255,166,87,.08);border-left:2px solid #ffa657}
+.strat .h{font-weight:700;color:#e6edf3;margin-bottom:3px;font-size:12px}
+.quote{margin-top:14px;padding:16px 14px;background:linear-gradient(135deg,rgba(248,81,73,.09),rgba(255,166,87,.05));border:1px solid rgba(255,166,87,.26);border-radius:10px;text-align:center}
+.quote .q{font-size:13.5px;line-height:1.9;color:#ffcb8a;font-weight:700}
+.quote .s{font-size:10.5px;color:#6e7681;margin-top:8px;letter-spacing:1px}
+.ft{text-align:center;font-size:10px;color:#484f58;margin-top:16px;line-height:1.8}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <div class="hd">
-  <h1>大王 · A股复盘</h1>
-  <div class="sub">2026年10月27日 星期二 · 收盘复盘</div>
-  <div class="tag">全球普涨 · A股独跌 · 尾盘跳水</div>
+  <h1>2026.10.28 周三 · A股复盘</h1>
+  <div class="sub">高低切换的反向一天 · 权重让位</div>
+  <div class="tag">创业板 +3.40% ｜ 成交 1.63 万亿放量 1675 亿</div>
 </div>
 
 <!-- 01 -->
 <div class="card">
-  <h2><span class="no">01</span>指数涨跌：全世界都在涨，只有我们在跌</h2>
+  <div class="ttl"><span class="no">01</span><span class="nm">指数涨跌</span><span class="ex">12 指数</span></div>
   <table>
-    <tr><th>指数</th><th class="r">收盘</th><th class="r">涨跌</th><th class="r">振幅</th></tr>
-    <tr><td>上证指数</td><td class="r dn">3648.30</td><td class="r dn">-1.33%</td><td class="r mut">1.62%</td></tr>
-    <tr><td>深证成指</td><td class="r dn">11245.73</td><td class="r dn">-2.50%</td><td class="r mut">3.36%</td></tr>
-    <tr><td>创业板指</td><td class="r dn">2548.15</td><td class="r dn">-3.41%</td><td class="r mut">4.64%</td></tr>
-    <tr><td>科创50</td><td class="r dn">1252.28</td><td class="r dn">-4.81%</td><td class="r mut">5.90%</td></tr>
-    <tr><td>北证50</td><td class="r dn">931.64</td><td class="r dn">-3.35%</td><td class="r mut">4.30%</td></tr>
-    <tr><td>沪深300</td><td class="r dn">4049.55</td><td class="r dn">-1.32%</td><td class="r mut">1.47%</td></tr>
-    <tr><td>上证50</td><td class="r dn">2746.79</td><td class="r dn">-0.80%</td><td class="r mut">1.00%</td></tr>
-    <tr><td>中证500</td><td class="r dn">6511.42</td><td class="r dn">-3.00%</td><td class="r mut">4.07%</td></tr>
-    <tr><td>中证1000</td><td class="r dn">6427.17</td><td class="r dn">-3.07%</td><td class="r mut">4.39%</td></tr>
-    <tr><td>中证全指</td><td class="r dn">5098.42</td><td class="r dn">-2.22%</td><td class="r mut">2.84%</td></tr>
-    <tr><td>红利指数</td><td class="r up">3283.86</td><td class="r up">+1.09%</td><td class="r mut">2.02%</td></tr>
+    <tr><th>指数</th><th>收盘</th><th>涨跌</th><th>幅度</th></tr>
+    <tr><td>上证指数</td><td>3681.47</td><td class="up">+33.17</td><td class="up b">+0.91%</td></tr>
+    <tr><td>深证成指</td><td>11473.18</td><td class="up">+227.45</td><td class="up b">+2.02%</td></tr>
+    <tr><td>创业板指</td><td>2634.76</td><td class="up">+86.61</td><td class="up b">+3.40%</td></tr>
+    <tr><td>科创50</td><td>1282.93</td><td class="up">+30.65</td><td class="up b">+2.45%</td></tr>
+    <tr><td>北证50</td><td>946.83</td><td class="up">+15.19</td><td class="up b">+1.63%</td></tr>
+    <tr><td>沪深300</td><td>4083.87</td><td class="up">+34.32</td><td class="up b">+0.85%</td></tr>
+    <tr><td>上证50</td><td>2753.01</td><td class="up">+6.22</td><td class="up b">+0.23%</td></tr>
+    <tr><td>中证500</td><td>6640.89</td><td class="up">+129.47</td><td class="up b">+1.99%</td></tr>
+    <tr><td>中证1000</td><td>6578.10</td><td class="up">+150.93</td><td class="up b">+2.35%</td></tr>
+    <tr><td>中证全指</td><td>5177.51</td><td class="up">+79.09</td><td class="up b">+1.55%</td></tr>
+    <tr><td>红利指数</td><td>3275.87</td><td class="dn">-7.99</td><td class="dn b">-0.24%</td></tr>
+    <tr><td>中证红利</td><td>5499.33</td><td class="up">+1.59</td><td class="up b">+0.03%</td></tr>
   </table>
-  <div class="kpi">
-    <div><b class="hl">14609.58</b><i>两市成交(亿)</i></div>
-    <div><b class="dn">-1478.35</b><i>缩量(亿)</i></div>
-    <div><b class="dn">-9.2%</b><i>量能降幅</i></div>
+  <div class="kv" style="margin-top:9px"><span class="k">沪市成交</span><span class="v">7510.19 亿</span></div>
+  <div class="kv"><span class="k">深市成交</span><span class="v">8774.68 亿</span></div>
+  <div class="kv"><span class="k">沪深合计</span><span class="v hl">16284.87 亿（+1675.29 亿 / +11.5%）</span></div>
+  <div class="kv"><span class="k">三市口径</span><span class="v">约 1.64 万亿</span></div>
+  <div class="note">
+    <b>大王点评：</b>今天是 10/27 的<span class="y">完整镜像</span>。昨天杀成长、保权重，今天反过来：创业板 +3.40% 领涨、红利指数 -0.24% 唯一收绿、上证50 只涨 0.23%。最刺眼的一个细节——<b>上证50 开盘价 2776.59 就是全天最高价</b>，然后一路阴跌到 2753.01，等于权重股被"高开后卖出"了一整天。但别急着喊反转：<span class="y">没有任何一个指数收复 10/27 的跌幅</span>——沪指 10/26 收 3697.52，今天 3681.47 还差 16 点；创业板 10/26 收 2638.23，今天 2634.76 还差 3.5 点。这叫修复，不叫反转。
   </div>
-  <div class="p" style="margin-top:8px">今天这个盘面，我是真看不懂。隔夜道指+0.28%、纳指+0.82%、<b>费城半导体+2.82%创一个月最大涨幅</b>，日韩也在涨。A股三大指数<b>集体高开</b>——沪指+0.02%、深成+0.49%、创业板+0.89%、科创综指+1.11%，全市场2700多只上涨。然后呢？一路走低，尾盘加速，<b>沪指收在全天最低 3648.30，光头光脚</b>。</div>
-  <div class="mark">看这个跌幅排序：<b>科创50 -4.81% ＞ 创业板 -3.41% ＞ 中证1000 -3.07% ＞ 中证500 -3.00% ＞ 深成 -2.50% ＞ 沪指 -1.33% ≈ 沪深300 -1.32% ＞ 上证50 -0.80% ＞ 红利 +1.09%</b>。这不是按市值排的，是<b>按"成长属性 + 前期拥挤度"从高到低精准排的</b>。杀的不是全市场，是那些被抱得最紧的地方。</div>
-  <div class="li">沪指跌破 <b>3674 点（"924行情"高点）</b>，同时失守 5 日线（约3686）与10日线（约3690），短期均线空头排列；</div>
-  <div class="li"><b>科创50 收 1252.28，再创年内新低</b>，从 7 月初 2255.25 的高点算起，回撤已达 <b>44.5%</b>；</div>
-  <div class="li">从盘中高点算：科创50 回落 <b>5.84%</b>、创业板回落 <b>4.58%</b>——跌幅基本全在午后完成，不是一开盘就认输。</div>
-  <div class="p">成交额 1.46 万亿，连续第三个交易日缩量。上周五 1.96 万亿 → 周一 1.61 万亿 → 今天 1.46 万亿。<b>单边下跌 + 缩量 = 想卖的人卖得掉，但没人愿意接</b>。这种跌法，杀伤力在"广度"上，不在"深度"上。</div>
-  <div class="note">数据核对：沪 6724.14 亿 + 深 7885.44 亿 = 14609.58 亿，与界面新闻/新浪财经口径 14609.58 亿零误差；缩量额与媒体 1478.35 亿逐位吻合；沪深京合计 1.47 万亿、减 1502 亿（腾讯新闻口径）。</div>
 </div>
 
 <!-- 02 -->
 <div class="card">
-  <h2><span class="no">02</span>市场情绪：概念红盘只剩 5 个，这不是调整是清场</h2>
-  <table>
-    <tr><th>指标</th><th class="r">今日</th><th class="r">上一交易日</th></tr>
-    <tr><td>上涨家数</td><td class="r dn">606</td><td class="r mut">2252</td></tr>
-    <tr><td>下跌家数</td><td class="r up">4922</td><td class="r mut">3157</td></tr>
-    <tr><td>涨停（媒体/池）</td><td class="r up">42 / 41</td><td class="r mut">59 / 55</td></tr>
-    <tr><td>跌停（媒体/池）</td><td class="r dn">23 / 22</td><td class="r mut">27 / 26</td></tr>
-    <tr><td>炸板数</td><td class="r hl">28</td><td class="r mut">23</td></tr>
-    <tr><td>封板率</td><td class="r hl">59.4%</td><td class="r mut">70.5%</td></tr>
-    <tr><td>连板 / 首板占比</td><td class="r hl">12 / 70.7%</td><td class="r mut">15 / 72.7%</td></tr>
-    <tr><td>晋级率</td><td class="r dn">26.7%</td><td class="r mut">18.3%</td></tr>
-  </table>
-  <div class="mark">今天最硬的一个数字，不是涨停 42 家，是<b>概念板块红盘数只有 5/200</b>。上周五是 <b>195/200</b>，昨天是 <b>43/200</b>，今天是 <b>5/200</b>。三天，从"几乎全红"杀到"几乎全绿"。<b>这个概念红盘数低于 50 就是"集体撤退"的铁证</b>——任何用"结构性行情"解释今天的说法，都过不了这个数。</div>
-  <div class="p"><b>核心矛盾：下跌面一天之内从"多数人"变成"几乎所有人"。</b>昨天跌 3157 家，今天 4922 家，<b>下跌占比 89%</b>。更刺激的是涨停 42 vs 跌停 23，<b>封板率掉到 59.4%，炸板 28 家</b>——意思是上个板就算成功了，也有四成被人砸开。</div>
-  <div class="p">连板梯队还在，但只剩 <b>12 只</b>，最高 <b>上海九百 5 板</b>。12 只里 <b>8 只是 2 板</b>，3-4 板只有 4 只。<b>首板 29 只，占 70.7%</b>——和昨天一样，是"抢"不是"接"。情绪读数已经打到 <b>23.3，冰点区</b>。</div>
-  <div class="p">三个细节，都写下来：</div>
-  <div class="li">弘景光电（光学光电）<b>炸板 9 次</b>、换手 19.17%，尾盘勉强封住——分歧到极致；</div>
-  <div class="li">海洋王炸 <b>6 次</b>、换手 <b>28.85%</b>、封单仅 0.33 亿——这是老妖股最后一次挣扎；</div>
-  <div class="li">跌停里 <b>紫光国微、洪都航空、华正新材、慈文传媒</b> 全是前期的"明牌"，华正新材、华瓷股份<b>两连跌停</b>。</div>
-  <div class="note">口径说明：606/4922/42/23 为含北交所的全市场媒体口径（界面新闻、新浪财经、腾讯新闻、同花顺四源一致）；我自采的沪深两市为 594涨/4653跌/47平，差额即北交所。涨停媒体 42 / 东财池 41，跌停 23 / 池 22，差异来自 ST 与北交所。另有媒体按含ST口径统计为 44 涨停 / 27-28 跌停。</div>
+  <div class="ttl"><span class="no">02</span><span class="nm">市场情绪</span><span class="ex">8 项读数</span></div>
+  <div class="kv"><span class="k">涨跌家数（沪深自采）</span><span class="v"><span class="up">3905 涨</span> / <span class="dn">1207 跌</span> / 182 平</span></div>
+  <div class="kv"><span class="k">媒体口径（含北交所）</span><span class="v up">超 4100 只上涨</span></div>
+  <div class="kv"><span class="k">涨停家数</span><span class="v up">72 只</span></div>
+  <div class="kv"><span class="k">跌停家数</span><span class="v dn">10 只（含 ST）</span></div>
+  <div class="kv"><span class="k">炸板家数</span><span class="v hl">69 只</span></div>
+  <div class="kv"><span class="k">封板率</span><span class="v hl">51.1%</span></div>
+  <div class="kv"><span class="k">连板股 / 晋级率</span><span class="v">8 只 / 25%</span></div>
+  <div class="kv"><span class="k">首板占比</span><span class="v">88.9%（64/72）</span></div>
+  <div class="kv"><span class="k">概念红盘数</span><span class="v up">192 / 200</span></div>
+  <div class="note">
+    <b>核心矛盾：涨得多，但封不住。</b>指数涨 3.40%，涨停只有 72 只（昨天 41 只），可炸板 69 只、封板率 <span class="y">51.1%——比昨天 59.4% 还低</span>。这是极不正常的组合：如果真是情绪修复，封板率该往上走。首板占比 88.9%、晋级率仅 25%，说明钱只在"抢第一天"，第二天没人接力。午后机器人概念批量炸板、上海九百 6 板巨量分歧晋级失败、多伦科技 4 板断板直接跌停——<b>高标已经开始杀人了</b>。定性：<span class="y">这是权重票拉出来的"指数修复"，不是个股赚钱效应扩散出来的"情绪修复"。</span>情绪读数我给 58（中性偏暖，追高即套）。
+  </div>
 </div>
 
 <!-- 03 -->
 <div class="card">
-  <h2><span class="no">03</span>板块异动：31 个行业，只有 1 个红</h2>
-  <h3 class="sec">涨幅 TOP5（申万二级）</h3>
+  <div class="ttl"><span class="no">03</span><span class="nm">板块异动</span><span class="ex">申万一级 23涨/7跌/1平</span></div>
   <table>
-    <tr><th>板块</th><th class="r">涨幅</th><th>逻辑</th></tr>
-    <tr><td class="up">股份制银行Ⅱ</td><td class="r up">+1.61%</td><td class="sm">21家上市银行中期分红拟派超2600亿</td></tr>
-    <tr><td class="up">农商行Ⅱ</td><td class="r up">+1.37%</td><td class="sm">沪农商行创年内新高，资金躲进股息</td></tr>
-    <tr><td class="up">城商行Ⅱ</td><td class="r up">+1.13%</td><td class="sm">重庆银行、北京银行涨幅居前</td></tr>
-    <tr><td class="up">航运港口</td><td class="r up">+1.00%</td><td class="sm">BDI 概念 +0.24%，中谷物流涨停</td></tr>
-    <tr><td class="up">国有大型银行Ⅱ</td><td class="r up">+0.82%</td><td class="sm">工行、建行双双再创历史新高</td></tr>
+    <tr><th>涨幅 TOP5</th><th>幅度</th><th>主力</th><th>红/总</th></tr>
+    <tr><td>通信</td><td class="up b">+5.01%</td><td class="up">+77.45亿</td><td class="dim">102/121</td></tr>
+    <tr><td>电子</td><td class="up b">+3.97%</td><td class="up">+146.82亿</td><td class="dim">468/497</td></tr>
+    <tr><td>机械设备</td><td class="up b">+3.66%</td><td class="up">+33.65亿</td><td class="dim">467/541</td></tr>
+    <tr><td>汽车</td><td class="up b">+2.63%</td><td class="up">+22.81亿</td><td class="dim">238/290</td></tr>
+    <tr><td>传媒</td><td class="up b">+1.98%</td><td class="up">+7.94亿</td><td class="dim">106/130</td></tr>
   </table>
-  <div class="p sm">补充：工业金属 +0.68%（铝概念资金+4.15亿）、电机Ⅱ +0.52%（大洋/凯中/华新精科涨停）、一般零售 +0.17%（7只涨停）。</div>
-  <h3 class="sec">跌幅 TOP5（申万二级）</h3>
-  <table>
-    <tr><th>板块</th><th class="r">涨幅</th><th>逻辑</th></tr>
-    <tr><td class="dn">航空装备Ⅱ</td><td class="r dn">-5.13%</td><td class="sm">洪都航空跌停，军工整体 -4.16%</td></tr>
-    <tr><td class="dn">软件开发</td><td class="r dn">-4.57%</td><td class="sm">证券IT -5.01%、国产软件 -4.46%</td></tr>
-    <tr><td class="dn">半导体</td><td class="r dn">-4.54%</td><td class="sm">主力 -74.21亿，紫光国微跌停</td></tr>
-    <tr><td class="dn">军工电子Ⅱ</td><td class="r dn">-4.48%</td><td class="sm">无人战机 -5.13%、军工信息化 -4.78%</td></tr>
-    <tr><td class="dn">橡胶</td><td class="r dn">-4.37%</td><td class="sm">跟跌周期，无独立逻辑</td></tr>
+  <table style="margin-top:9px">
+    <tr><th>跌幅 TOP5</th><th>幅度</th><th>主力</th><th>红/总</th></tr>
+    <tr><td>食品饮料</td><td class="dn b">-1.46%</td><td class="dn">-8.04亿</td><td class="dim">51/122</td></tr>
+    <tr><td>农林牧渔</td><td class="dn b">-0.76%</td><td class="dn">-3.76亿</td><td class="dim">42/103</td></tr>
+    <tr><td>非银金融</td><td class="dn b">-0.63%</td><td class="dn">-13.51亿</td><td class="dim">23/77</td></tr>
+    <tr><td>银行</td><td class="dn b">-0.58%</td><td class="up">+7.63亿</td><td class="dim">12/42</td></tr>
+    <tr><td>美容护理</td><td class="dn b">-0.42%</td><td class="up">+1.57亿</td><td class="dim">13/28</td></tr>
   </table>
-  <div class="mark">一级行业 <b>31 个只有银行 1 个收红（+1.23%）</b>，交通运输 0.00% 平盘，其余 29 个全绿。<b>这不是"板块轮动"，这是"只有一个地方能躲雨"</b>。最扎心的一点：<b>隔夜费城半导体 +2.82%，A股半导体 -4.54%</b>——海外利好完全传导不过来，说明卖压来自内部，不是外部定价。</div>
-  <div class="note">数据来源：腾讯财经申万一级/二级行业实时排行（31个一级 + 124个二级），逐项自采，未使用二手表格。</div>
+  <div class="note">
+    <b>逻辑拆解：</b>①<b>通信 +5.01% 是今天唯一有"新信息"的板块</b>——Lumentum 说光器件产能已被预订到 2029 年初、客户开始锁 2030 年产能，2027 年还有七成需求吃不下，这是产能周期的硬定价，不是估值修复。②<b>电子 +3.97% / +146.82 亿</b> 是昨天的精确反向（昨天 -3.79% / -147.62 亿），一天之内砍完买回来，标准调仓。③二级层面 <b>元件 +4.97% / +50.00 亿</b>、<b>半导体 +4.20% / +68.17 亿</b>、<b>通信设备 +6.01% / +75.77 亿</b> 三个环节一起回补。④跌的这一边全是防御：<b>白酒Ⅱ -2.20%</b>（五粮液 Q3 净利 -48.25%）、<b>航海装备 -1.94%</b>、<b>养殖业 -1.64%</b>、<b>证券Ⅱ -0.87%/-13.76 亿</b>。银行 -0.58% 但主力还是净流入 +7.63 亿，42 只只有 12 只红——<span class="y">是权重股在拖，不是资金在跑</span>。
+  </div>
 </div>
 
 <!-- 04 -->
 <div class="card">
-  <h2><span class="no">04</span>热门涨停题材：机器人是全场最后的倔强</h2>
+  <div class="ttl"><span class="no">04</span><span class="nm">热门涨停题材</span><span class="ex">72 只</span></div>
   <table>
-    <tr><th>题材</th><th class="c">家数</th><th>代表个股</th></tr>
-    <tr><td>汽车零部件</td><td class="c hl">9</td><td class="sm">襄阳轴承4板、光洋2板、亚太、凯众、秦安</td></tr>
-    <tr><td>一般零售</td><td class="c hl">7</td><td class="sm">上海九百5板、深赛格、国芳、广百、茂业</td></tr>
-    <tr><td>电机Ⅱ</td><td class="c hl">3</td><td class="sm">大洋电机、凯中精密、华新精科</td></tr>
-    <tr><td>休闲食品</td><td class="c">2</td><td class="sm">青岛食品2板、桂发祥2板</td></tr>
-    <tr><td>通信设备</td><td class="c">2</td><td class="sm">天邑股份、科瑞思2板</td></tr>
-    <tr><td>家电零部件</td><td class="c">2</td><td class="sm">东贝集团、盾安环境</td></tr>
-    <tr><td>其他（各1）</td><td class="c">16</td><td class="sm">赛福天4板、多伦科技4板、宏明电子、江顺科技、亚玛顿、横河精密、九牧王、峨眉山A、中谷物流、文投控股等</td></tr>
+    <tr><th>题材（二级行业）</th><th>家数</th><th>代表 / 封单</th></tr>
+    <tr><td>汽车零部件</td><td class="up b">11</td><td class="dim">襄阳5板 2.92亿</td></tr>
+    <tr><td>通用设备</td><td class="up b">8</td><td class="dim">五洲新春 2.00亿</td></tr>
+    <tr><td>专用设备</td><td class="up b">5</td><td class="dim">宁波东力 1.03亿</td></tr>
+    <tr><td>元件</td><td class="up b">3</td><td class="dim">金安国纪 3.27亿</td></tr>
+    <tr><td>半导体</td><td class="up b">3</td><td class="dim">富瀚微 1.53亿</td></tr>
+    <tr><td>化学制品</td><td class="up b">3</td><td class="dim">光华科技 1.11亿</td></tr>
   </table>
-  <h3 class="sec">封单 TOP5</h3>
-  <table>
-    <tr><th>个股</th><th class="r">封单</th><th class="r">连板</th><th class="r">炸板</th></tr>
-    <tr><td>深赛格</td><td class="r hl">4.01亿</td><td class="r">首板</td><td class="r">0</td></tr>
-    <tr><td>光洋股份</td><td class="r hl">1.70亿</td><td class="r">2板</td><td class="r">0</td></tr>
-    <tr><td>上海九百</td><td class="r hl">1.50亿</td><td class="r up">5板</td><td class="r">0</td></tr>
-    <tr><td>襄阳轴承</td><td class="r hl">1.28亿</td><td class="r">4板</td><td class="r">1</td></tr>
-    <tr><td>多伦科技</td><td class="r hl">1.15亿</td><td class="r">4板</td><td class="r">1</td></tr>
+  <table style="margin-top:9px">
+    <tr><th>封单金额 TOP6</th><th>封单</th><th>板数</th><th>行业</th></tr>
+    <tr><td>金安国纪</td><td class="up b">3.27亿</td><td>首板</td><td class="dim">元件</td></tr>
+    <tr><td>襄阳轴承</td><td class="up b">2.92亿</td><td class="hl">5 板</td><td class="dim">汽零</td></tr>
+    <tr><td>万向钱潮</td><td class="up b">2.28亿</td><td>首板</td><td class="dim">汽零</td></tr>
+    <tr><td>五洲新春</td><td class="up b">2.00亿</td><td>首板</td><td class="dim">通用设备</td></tr>
+    <tr><td>青岛食品</td><td class="up b">1.85亿</td><td class="hl">3 板</td><td class="dim">休闲食品</td></tr>
+    <tr><td>光洋股份</td><td class="up b">1.78亿</td><td class="hl">3 板</td><td class="dim">汽零</td></tr>
   </table>
-  <div class="mark"><b>大王的观察：41 只涨停里，汽零 + 电机合计 12 只，占三成。</b>襄阳轴承4板、光洋2板、赛福天4板、多伦4板、大洋电机、凯中精密——在 4900 只下跌的背景下，这是唯一还能做出连板梯队的方向。弱市炒妖，A股的老规矩，但今天是<b>机器人第一次在"全场失血"里做到位</b>，含金量比普涨时高。</div>
-  <div class="p">另一边是屠杀现场：<b>紫光国微跌停</b>（前三季净利10.45亿，<b>-17.23%</b>；Q3单季2.48亿，<b>-56.63%</b>）、洪都航空跌停、众生药业跌停、慈文传媒跌停、华正新材（元件）<b>两连跌停</b>。这批全是三季报"业绩不好看"的明牌——<b>季报窗口期，坏消息是被直接按在板上的。</b></div>
-  <div class="note">数据来源：东方财富涨停池（41只，含首封时间/封单/连板数/炸板次数/换手/所属行业）、炸板池（28只）、跌停池（22只），逐只解析。</div>
+  <div class="note">
+    <b>大王观察：</b>最有意思的不是襄阳轴承 5 板，是<b>金安国纪</b>——它昨天还是<b>2 连跌停</b>的元件股，今天一根涨停封单 3.27 亿坐全场第一。同一个票，48 小时内从跌停板到封单王，说明<b>元件这条链昨天的杀跌是纯情绪而非基本面</b>，今天资金用最直接的方式纠错了。另一个信号：<b>汽车零部件 11 只涨停 + 通用设备 8 只</b>，人形机器人产业链（襄阳、光洋、东贝连板晋级）是唯一成梯队的线。但午后上纬新材、当虹科技、创维数字批量炸板、宇树科技 700 元得而复失，物理 AI 分歧明显加大。<b>涨停结构一句话：汽车+机械合计 20 只，占 72 只近三成——今天的主线是"制造业"，不是"算力"。</b>
+  </div>
 </div>
 
 <!-- 05 -->
 <div class="card">
-  <h2><span class="no">05</span>行业资金流向：31 个行业只有 3 个净流入</h2>
-  <h3 class="sec">净流入（申万31，仅3个为正）</h3>
+  <div class="ttl"><span class="no">05</span><span class="nm">行业资金流向</span><span class="ex">申万31 合计 +224.62亿</span></div>
   <table>
-    <tr><th>板块</th><th class="r">主力净额</th><th class="r">涨跌</th><th>四象限</th></tr>
-    <tr><td>银行</td><td class="r up">+7.50亿</td><td class="r up">+1.23%</td><td class="sm">涨且流入 → 真买</td></tr>
-    <tr><td>美容护理</td><td class="r up">+1.69亿</td><td class="r dn">-2.84%</td><td class="sm">跌但流入 → 承接</td></tr>
-    <tr><td>社会服务</td><td class="r up">+0.21亿</td><td class="r dn">-2.38%</td><td class="sm">跌但流入 → 微承接</td></tr>
+    <tr><th>净流入 TOP5</th><th>主力</th><th>幅度</th></tr>
+    <tr><td>电子</td><td class="up b">+146.82亿</td><td class="up">+3.97%</td></tr>
+    <tr><td>通信</td><td class="up b">+77.45亿</td><td class="up">+5.01%</td></tr>
+    <tr><td>机械设备</td><td class="up b">+33.65亿</td><td class="up">+3.66%</td></tr>
+    <tr><td>汽车</td><td class="up b">+22.81亿</td><td class="up">+2.63%</td></tr>
+    <tr><td>基础化工</td><td class="up b">+10.33亿</td><td class="up">+1.64%</td></tr>
   </table>
-  <h3 class="sec">净流出 TOP5</h3>
-  <table>
-    <tr><th>板块</th><th class="r">主力净额</th><th class="r">涨跌</th><th>四象限</th></tr>
-    <tr><td>电子</td><td class="r dn">-145.80亿</td><td class="r dn">-3.95%</td><td class="sm">跌且流出 → 出逃</td></tr>
-    <tr><td>计算机</td><td class="r dn">-61.26亿</td><td class="r dn">-4.13%</td><td class="sm">跌且流出 → 出逃</td></tr>
-    <tr><td>机械设备</td><td class="r dn">-42.33亿</td><td class="r dn">-3.12%</td><td class="sm">跌且流出 → 出逃</td></tr>
-    <tr><td>电力设备</td><td class="r dn">-28.16亿</td><td class="r dn">-2.41%</td><td class="sm">跌且流出 → 出逃</td></tr>
-    <tr><td>医药生物</td><td class="r dn">-26.95亿</td><td class="r dn">-3.46%</td><td class="sm">跌且流出 → 出逃</td></tr>
+  <table style="margin-top:9px">
+    <tr><th>净流出 TOP5</th><th>主力</th><th>幅度</th></tr>
+    <tr><td>电力设备</td><td class="dn b">-19.34亿</td><td class="up">+0.73%</td></tr>
+    <tr><td>非银金融</td><td class="dn b">-13.51亿</td><td class="dn">-0.63%</td></tr>
+    <tr><td>计算机</td><td class="dn b">-9.51亿</td><td class="up">+0.83%</td></tr>
+    <tr><td>有色金属</td><td class="dn b">-8.58亿</td><td class="up">+0.61%</td></tr>
+    <tr><td>国防军工</td><td class="dn b">-8.24亿</td><td class="up">+1.04%</td></tr>
   </table>
-  <div class="mark"><b>申万31个行业主力资金加总：-457.10亿。</b>这不是"调仓"，是<b>净离场</b>——昨天加总是 -276.11 亿，今天翻了一倍多。<b>只有 3 个行业有钱进来，银行拿走 7.50 亿，剩下 28 个都在流血。</b>更关键的是：这是<b>缩量</b>下的 457 亿净流出，说明卖的比买的急，不是换手。</div>
-  <div class="p">往下再拆一层二级行业，更能看清钱去哪了：</div>
-  <div class="li">流入：<b>电机 +6.80亿、股份制银行 +6.59亿、国有大行 +3.54亿、个护用品 +2.48亿、一般零售 +2.38亿</b>；</div>
-  <div class="li">流出：<b>半导体 -74.21亿、元件 -35.23亿、软件开发 -33.42亿、电池 -20.82亿、通信设备 -20.65亿、消费电子 -18.88亿、IT服务 -17.44亿、通用设备 -17.02亿、自动化设备 -17.00亿</b>；</div>
-  <div class="li">概念端（200个）：<b>芯片 -221.30亿、融资融券 -196.61亿、华为 -174.23亿、人工智能 -161.31亿、机器人 -154.33亿、半导体产业 -124.15亿、国企改革 -116.57亿、新能源车 -113.97亿</b>。</div>
-  <div class="p"><b>这里有个很有意思的矛盾：机器人概念整体流出 154.33 亿，但电机二级行业净流入 6.80 亿、个股还在涨停。</b>翻译：<b>整条链在被砸，只有"电机/减速器"这个最靠实体的环节在被买</b>。资金不再买"讲故事的人形机器人"，改买"能交货的零部件"。这个信号我记下了。</div>
-  <div class="note">口径：腾讯财经申万31个一级 + 124个二级 + 200个概念板块主力净额（单位：亿元，已换算）。新浪/界面的 Wind 口径显示半导体产品 -79.5亿、机动车零配件 +33.3亿、多元化银行 +30.0亿，与我自采口径在"汽零"一项差异较大（Wind 统计含机构席位与大宗），本表统一采用申万口径，特此说明。</div>
+  <div class="note">
+    <b>这是今天最硬的一个数字：</b>31 个一级行业主力资金加总 <span class="y">+224.62 亿</span>，昨天是 -457.10 亿——单日摆动 <b>682 亿</b>。这不是小钱搬仓，这是方向性翻转。但增量从哪来？<b>两融昨天还在 13 连降（24097.54 亿，累计缩水 1644 亿）</b>，说明放量的 1675 亿<b>不是杠杆的钱</b>，是机构在砍完半导体（融资余额一个多月减了 527 亿）之后重新买回来。<b>概念端更直白：芯片 +207.59 亿、5G +140.60 亿、机器人 +138.29 亿、CPO +135.45 亿</b>；流出最大的是有色 -21.39 亿、券商 -14.10 亿、中字头 -13.19 亿、钼概念 -12.93 亿——<span class="y">钱是从"国资+资源+金融"搬到"算力+制造"</span>，一天完成。
+  </div>
 </div>
 
 <!-- 06 -->
 <div class="card">
-  <h2><span class="no">06</span>重大消息面：五件事，四件是坏的</h2>
+  <div class="ttl"><span class="no">06</span><span class="nm">重大消息面</span><span class="ex">5 条 · 双源核验</span></div>
 
   <div class="news">
-    <div class="t">① 1-9月工业利润 +15.5%，但9月单月掉到 +14.4%</div>
-    <div class="b">统计局上午9:30发布：1-9月规上工业企业利润 <b>60337.4 亿元，同比 +15.5%</b>；营收106.21万亿 +6.6%。结构上：<b>采矿业+38.2%、制造业+17.0%、电力热力燃气水-14.3%</b>。<b>9月单月 +14.4%，比8月的+20.4%明显放缓。</b>亮点在高端：<b>高技术制造业利润+52%，电子行业利润同比+1倍</b>，电子专用材料+2.2倍、半导体分立器件+51.7%、光纤光缆+5.3倍。</div>
-    <div class="mark" style="margin-top:6px">业绩好，股价跌——<b>这就是"利好出尽"最标准的模样</b>。电子利润翻倍，电子板块今天 -3.95%、主力 -145.80亿。<b>产业景气没错，错的是估值和筹码。</b></div>
+    <h4>① Lumentum：光器件产能预订到 2029 年初，2027 年仍有七成需求吃不下</h4>
+    <p>全球光器件巨头 Lumentum CEO 表示，部分光器件产能已被预订至 2029 年初，客户开始锁定 2030 年的产能；就算持续扩产，2027 年依旧有七成左右的市场需求无法被消化。→ 中际旭创 <b class="up">+10.28%</b>（636.30 元）尾盘拉升、新易盛 <b class="up">+8.08%</b>，CPO 概念主力 <b class="up">+135.45 亿</b>、光模块尾盘集体异动。<span class="imp">这是今天唯一"新增"的实质信息——不是估值修复，是产能周期定价。缺货到 2029 年，意味着这条线的盈利预期要按年往后推。</span></p>
   </div>
 
   <div class="news">
-    <div class="t">② 五中全会 10/26-29 在京举行，29日闭幕后出公报</div>
-    <div class="b">二十届五中全会在北京举行，会期至 10 月 29 日。新华社通稿的议程为：中央政治局向中央委员会报告工作、研究持之以恒推进全面从严治党若干重大问题；市场同时高度关注"十五五"相关部署，<b>29日闭幕后发布的公报是本周国内最大的政策变量</b>。政策已在铺垫：国办印发《国家信息化"十五五"规划》，提出<b>适时启动6G商用、布局算力网与AI芯片</b>；发改委 8000亿新型政策性金融工具三季度已投放完毕；财政部称将提前下达2027年部分新增地方债限额。</div>
+    <h4>② 隔夜费半 +3.6%，30 只成分股全线上涨，传导链条恢复了</h4>
+    <p>10/27 美股道指 +0.03% 报 52377.57、纳指 <b class="up">+1.18%</b> 报 26477.81、费城半导体 <b class="up">+3.6%</b>（30 只成分股全涨，存储与设备领涨）。<span class="imp">关键不在涨多少，在于"传导回来了"：昨天费半 +2.82% 而 A 股半导体 -4.54%、主力 -74 亿，说明卖压来自内部；今天费半再涨 3.6%，A 股半导体 +4.20%、主力 +68.17 亿——外部利好终于能传进来了，这是情绪真正修复的第一个证据。</span></p>
   </div>
 
   <div class="news">
-    <div class="t">③ 央行放水放到"夸张"：单日净投放 10,140 亿</div>
-    <div class="b">10月27日，央行开展 <b>4120 亿元 7 天期逆回购</b>（利率1.40%，全额满足）+ <b>10000 亿元隔夜逆回购</b>，对冲 3980 亿到期后<b>单日净投放 10,140 亿元</b>。此前10月26日已提前开展 <b>7000 亿元 1 年期 MLF</b>（当月到期9000亿，净回笼2000亿），并宣布设立<b>债市非银大额赎回互换便利（BNSF）</b>——支持理财子公司、公募在极端情形下借入央票回购融资，直接堵"赎回—抛售"负反馈。</div>
-    <div class="mark" style="margin-top:6px">这条最关键的地方在于：<b>流动性一点都不紧，跌不是缺钱。</b>一天净投放 1 万亿还跌成这样，说明问题在"信心"和"筹码"，不在"水位"。<b>所以别拿"央行放水"当抄底理由。</b></div>
+    <h4>③ 上海《加快发展新一代智能制造行动方案》落地，人形机器人政策背书</h4>
+    <p>提出到 2028 年 AI 赋能的新型智能制造装备产业规模突破 <b>2000 亿元</b>、智能制造系统集成产业规模达 <b>1000 亿元</b>，推动 <b>8000 台人形机器人进工厂</b>，工业机器人密度达 <b>600 台/万人</b>。→ 襄阳轴承 5 连板、光洋股份 3 连板、东贝集团 2 板，福莱新材触及涨停创历史新高。<span class="imp">但要注意：午后上纬新材等多股批量炸板、宇树科技 700 元得而复失，凡拓数创、利亚德先后翻绿——政策是实的，筹码是虚的，这条线现在缺的是"向上拓展高度的品种"。</span></p>
   </div>
 
   <div class="news">
-    <div class="t">④ 超级央行周：美联储 10/29 凌晨出结果，12月加息概率约78%</div>
-    <div class="b">美联储 10/27-28 议息，<b>北京时间 10 月 29 日凌晨 2 点公布</b>。CME"美联储观察"显示 10 月<b>维持 3.75%-4.00% 不变概率约 89.5%</b>，但<b>12 月加息概率已升至约 78%</b>。美国9月CPI同比 3.7%、PPI 6.3%，布油仍在 110 美元上方，通胀黏性让"紧缩结束"的说法站不住。欧央行 10/29、日央行 10/30 接连落地，周四还有美国9月PCE。</div>
+    <h4>④ 三季报分化到极致：中科曙光 Q3 净利 +217%，五粮液 Q3 净利 -48.25%</h4>
+    <p>中科曙光 Q3 净利 7.53 亿元同比 <b class="up">+217%</b>、环比 +1%；东材科技前三季净利 4.43 亿 <b class="up">+56.69%</b>（章建平新进第三大股东）。另一边五粮液 Q3 营收 44.42 亿 <b class="dn">-37.68%</b>、净利 9.58 亿 <b class="dn">-48.25%</b>。→ 白酒Ⅱ <b class="dn">-2.20%</b>、茅台 <b class="dn">-1.85%</b>（1330.75 元）、食品饮料成唯一跌超 1% 的一级行业。<span class="imp">"算力业绩兑现 + 消费业绩塌方"在同一天被摆到桌面上，这就是资金敢从白酒搬到光模块的原因——不是偏好变了，是财报逼的。</span></p>
   </div>
 
   <div class="news">
-    <div class="t">⑤ 隔夜全球普涨，大摩却警告半导体还要再跌10-15%</div>
-    <div class="b">隔夜美股三大指数全涨，<b>费半 +2.82% 创一个月最大涨幅</b>，英伟达+2.39%、SK海力士+4.09%、美光+2.98%；Anthropic 正式递交 IPO 招股书（估值1.5-2万亿美元）、Meta 启动最高950亿美元股权融资。但<b>摩根士丹利明确警告半导体可能还要再跌 10%-15%</b>，理由是 AI 基建融资成本上升、投资回报清晰度不足；伯恩斯坦指出硬件芯片 AI 持仓"过度拥挤"。另一头，中东斡旋推进使油价回落，<b>WTI 100.55（-2.17%）盘中破100、布油 110.42（-1.33%）</b>，黄金反弹至 4012 上方。</div>
-    <div class="mark" style="margin-top:6px">顺便记一笔黑天鹅：<b>巴西卢拉连任后 IBOVESPA 单日跌 13.88% 触发熔断</b>（2020年3月来首次），雷亚尔一度贬超11%，小盘股指数跌30%——新兴市场的局部风险，短期对A股是情绪压制项。</div>
+    <h4>⑤ 台积电 CoWoS 涨价 10%~20%，先进封装 +72.59 亿；今晚美联储 + 明天全会公报</h4>
+    <p>台积电正考虑将 CoWoS 先进封装服务价格上调 <b>10%~20%</b>，因 AI 芯片需求从 GPU 扩展至服务器 CPU 与定制化 AI 芯片、先进封装产能趋紧。→ 先进封装（Chiplet）概念主力 <b class="up">+72.59 亿</b>、大基金二期 +38.34 亿。<span class="imp">未来 72 小时是全年最密集的窗口：今晚 02:00 美联储（按兵不动概率 89.5%~90.6%，12 月加息概率 74.7%）+ 沃什发布会 + 苹果发布会 + 微软/Alphabet 财报；明天五中全会闭幕公报（10/26-29，"十五五"规划建议）+ 美国 Q3 GDP 与 9 月 PCE + 欧央行；周五五大行与茅台三季报；周六 10 月官方 PMI（9 月 50.1，机构预期回落至 49.8）。</span></p>
   </div>
-  <div class="note">消息来源交叉验证：国家统计局数据经同花顺/腾讯新闻/金融投资报三源核对；央行操作金额经财联社与"一粟"午报双源一致；美联储概率经经济参考报（90.6%/67.5%）与财联社（89.5%/78%）两口径，本文标注区间差异；油价/黄金取自新浪财经外盘实时。</div>
 </div>
 
 <!-- 07 -->
 <div class="card">
-  <h2><span class="no">07</span>详细市场点评：三个字，没人接</h2>
-  <h3 class="sec">趋势</h3>
-  <div class="p">沪指光头光脚收在最低，跌破 3674（"924行情"高点），5日线、10日线全部失守，均线开始空头排列。这一根K线的形态是<b>最难看的那种</b>——高开、冲高、全天阴跌、尾盘加速、收在最低。科创50 再创年内新低，从 7 月高点回撤 44.5%。<b>趋势上，现在是"下行通道里的第二段"</b>，10/23 那根深V的 3574.27 是必须守住的位置，破了就是新一轮。</div>
-  <h3 class="sec">情绪</h3>
-  <div class="p">概念红盘 5/200、下跌 4922 家、封板率 59.4%、炸板 28 家、情绪读数 23.3——<b>冰点，而且是深冰点</b>。但要注意一个反常：<b>连板晋级率从 18.3% 回升到 26.7%</b>，机器人这条线还能做出 5板/4板/4板/4板的梯队。<b>这是"局部抱团 + 整体冰冻"的极端分化</b>，说明还有资金在做，只是只敢做一条线。冰点本身是反弹的前置条件，但<b>冰点不等于底部，冰点可以更冰</b>。</div>
-  <h3 class="sec">主线</h3>
-  <div class="p">今天的主线只有一条，而且是被动跑出来的：<b>高股息 + 内需防御</b>。银行（工行、建行历史新高，沪农商行年内新高）、航运港口、工业金属（铝）、零售（7只涨停）、食品（青岛食品/桂发祥2板）。这不是"看好"，这是<b>"别的地方不能待"</b>。反面是科技全线出清：半导体 -4.54%、军工 -4.16%、计算机 -4.13%、医药 -3.46%。<b>而机器人（电机/减速器）是唯一还保有进攻性的方向</b>——不是因为故事好，是因为资金需要一个"辨识度"来抱团。</div>
-  <h3 class="sec">资金</h3>
-  <div class="p">申万31加总 <b>-457.10亿</b>，仅 3 个行业净流入。二级看：半导体 -74.21亿、元件 -35.23亿、软件开发 -33.42亿，<b>这三个方向就吃掉了 143 亿</b>。反向：电机 +6.80亿、股份制银行 +6.59亿、国有大行 +3.54亿。<b>钱没走，钱搬家了——从"算力硬件"搬到"红利 + 能交货的零部件"。</b>另一个必须盯的：两融余额从 6 月的 3 万亿上方降到 2.4 万亿，上周净卖出 570 亿，电子、通信是主要被卖方向。<b>杠杆在去化，这个负反馈还没走完。</b></div>
-  <h3 class="sec">风险</h3>
-  <div class="p">三个风险，按我担心的顺序排：<b>第一，护盘资金没出手。</b>10/9、10/15 都是宽基ETF尾盘放量托底，今天沪深300等宽基ETF全天没见放量，尾盘才崩得那么陡——"该出手时没出手"本身就是情绪推手。<b>第二，三季报不对称博弈。</b>业绩差直接跌停（紫光国微Q3 -56.63%），业绩好也跌（寒武纪Q3 +147.74% 却因113倍PE被杀）。这个窗口里科技股<b>只能跌不能涨</b>。<b>第三，本周事件密度极高。</b>美联储决议（10/29凌晨）、五中全会公报（10/29）、美国PCE（周四）、三季报收官（10/31）、11/3中期选举。<b>任何一个落地前，资金都不会重仓。</b></div>
-  <div class="mark">一句话总结今天：<b>不是利空砸的，是没人接。</b>全天没有一条可验证的单一利空——媒体收评只描述"半导体、军工、软件尾盘集体下杀"，给不出触发事件；流动性还净投放了1万亿。<b>缩量阴跌 + 尾盘杀 = 主动降敞口，不是被动割肉。</b>这种跌是可逆的，但也最容易磨人。</div>
+  <div class="ttl"><span class="no">07</span><span class="nm">详细市场点评</span><span class="ex">五维度</span></div>
+
+  <p class="txt"><span class="lbl l1">趋势</span>沪指 3681.47 收复 5 日、10 日线，全天最低 3652.37 未破 10/27 低点，最高 3684.49 距收盘仅 3 点，是"高位横盘收在顶上"的形态，比昨天"光头光脚收最低"好太多。但排序要看清楚：<b>创业板 +3.40% &gt; 科创50 +2.45% &gt; 中证1000 +2.35% &gt; 深成 +2.02% ≈ 中证500 +1.99% &gt; 中证全指 +1.55% &gt; 沪指 +0.91% &gt; 沪深300 +0.85% &gt; 上证50 +0.23% &gt; 中证红利 +0.03% &gt; 红利指数 -0.24%</b>——完全按"成长属性"单调递减，跟昨天"按拥挤度递减"是两套指纹。这是典型的<b>超跌反抽</b>，不是趋势转折。真正的坎在 10/27 的跳空缺口和 3700 点整数关。</p>
+
+  <p class="txt"><span class="lbl l2">情绪</span>指数涨 3.40%，封板率却从 59.4% 掉到 51.1%，这是今天最矛盾的读数。涨停 72 只里 64 只是首板（88.9%），连板只有 8 只、晋级率 25%——<b>说明抢反弹的钱只肯待一天</b>。高标方面上海九百 6 板巨量分歧晋级失败、还被上交所下发监管工作函，多伦科技 4 板断板直接跌停，华瓷股份 3 连跌停、正裕工业 2 连跌停，高位股亏钱效应依旧高企。真正健康的是概念端：<b>200 个概念 192 个红盘</b>（昨天只有 5 个）——广度修复了，但深度没有。</p>
+
+  <p class="txt"><span class="lbl l1">主线</span>四条线，强弱分明：<b>算力硬件（唯一有硬逻辑）</b>——CPO +135.45 亿、光芯片 +62.45 亿、5G +140.60 亿，Lumentum 产能预订到 2029 年是实锤；<b>半导体（回补）</b>——半导体 +68.17 亿、芯片概念 +207.59 亿、先进封装 +72.59 亿，靠台积电涨价与三季报兑现；<b>汽车零部件 + 机器人（政策+筹码）</b>——11 只涨停最多，但午后批量炸板，分歧最大；<b>元件/覆铜板（纠错）</b>——金安国纪从 2 连跌停到封单 3.27 亿全场第一。这四条里，只有第一条是"新信息驱动"，其余三条都是"位置驱动"。</p>
+
+  <p class="txt"><span class="lbl l3">资金</span>申万 31 加总 <b class="up">+224.62 亿</b>，昨天 -457.10 亿，单日摆动 682 亿——这是本轮调整以来第一次像样的净流入。但要抠细节：<b>电力设备 -19.34 亿、证券 -13.76 亿、电池 -14.25 亿、软件开发 -10.81 亿还在跑</b>，说明钱不是新进来的，是从"防御资产 + 旧赛道"搬到"算力硬件 + 制造"。两个佐证：一是成交 16285 亿放量 1675 亿（+11.5%），但两融 13 连降、融资余额已缩了 1644 亿——<b>放量的钱不是杠杆的钱</b>；二是昨天融资盘在电子上砍了 527 亿、通信降幅 18.84%，今天恰好是这两条线涨最猛，<span class="hl">这是"砍完之后的反弹"，不是"加杠杆的进攻"。</span></p>
+
+  <p class="txt"><span class="lbl l4">风险</span>四条，按时间排：①<b>今晚 02:00 美联储</b>，按兵不动是共识（89.5%~90.6%），但 12 月加息概率 74.7%，沃什发布会只要偏鹰，全球风险资产就得重定价；②<b>明天三件事撞一起</b>——五中全会闭幕公报、美国 Q3 GDP 与 9 月 PCE、欧央行，A 股是在"信息真空"里涨上去的，落地即变盘；③<b>三季报 10/31 截止</b>，周五五大行 + 茅台压轴，白酒的雷可能还没爆完；④<b>封板率 51%</b> 本身就是风险提示——今天冲进去的 69 只炸板股，明天开盘就是抛压。加上上证50 高开即最高，<span class="hl">权重在这个位置是在出货，不是在吸筹。</span></p>
 </div>
 
 <!-- 08 -->
 <div class="card">
-  <h2><span class="no">08</span>持仓速览：1红7绿，润建给我留了面子</h2>
+  <div class="ttl"><span class="no">08</span><span class="nm">持仓速览</span><span class="ex">6 红 2 绿</span></div>
   <table>
-    <tr><th>标的</th><th class="r">收盘</th><th class="r">涨跌</th><th>信号</th></tr>
-    <tr><td>润建股份</td><td class="r up">54.04</td><td class="r up">+4.36%</td><td class="sm hl">摸涨停炸板，逆势最强</td></tr>
-    <tr><td>牧原股份</td><td class="r dn">41.45</td><td class="r dn">-0.22%</td><td class="sm">抗跌，猪价支撑</td></tr>
-    <tr><td>上证50ETF</td><td class="r dn">2.862</td><td class="r dn">-0.56%</td><td class="sm">权重护体，损失最小</td></tr>
-    <tr><td>证券ETF</td><td class="r dn">1.000</td><td class="r dn">-2.06%</td><td class="sm">券商跟跌，跌破1元</td></tr>
-    <tr><td>金钼股份</td><td class="r dn">16.76</td><td class="r dn">-2.27%</td><td class="sm">小金属流出，观察</td></tr>
-    <tr><td>创业板ETF</td><td class="r dn">2.563</td><td class="r dn">-3.32%</td><td class="sm dn">双创重灾区，浮亏扩大</td></tr>
-    <tr><td>振华新材</td><td class="r dn">9.62</td><td class="r dn">-3.51%</td><td class="sm dn">电池链 -2.80%，弱势</td></tr>
-    <tr><td>光云科技</td><td class="r dn">14.23</td><td class="r dn">-6.69%</td><td class="sm dn">重挫，AI概念杀估值</td></tr>
+    <tr><th>标的</th><th>收盘</th><th>幅度</th><th>信号</th></tr>
+    <tr><td>润建股份</td><td>56.25</td><td class="up b">+4.09%</td><td class="hl">触板回落</td></tr>
+    <tr><td>创业板ETF</td><td>2.649</td><td class="up b">+3.36%</td><td class="up">跟随</td></tr>
+    <tr><td>振华新材</td><td>9.80</td><td class="up b">+1.87%</td><td class="fl">弱反弹</td></tr>
+    <tr><td>光云科技</td><td>14.49</td><td class="up b">+1.83%</td><td class="fl">观察</td></tr>
+    <tr><td>金钼股份</td><td>16.83</td><td class="up b">+0.42%</td><td class="dn">资金流出</td></tr>
+    <tr><td>上证50ETF</td><td>2.866</td><td class="up b">+0.14%</td><td class="dn">权重走弱</td></tr>
+    <tr><td>证券ETF</td><td>0.992</td><td class="dn b">-0.80%</td><td class="dn">板块垫底</td></tr>
+    <tr><td>牧原股份</td><td>40.36</td><td class="dn b">-2.63%</td><td class="dn">跌破 41</td></tr>
   </table>
-  <div class="mark"><b>润建股份今天最值得说。</b>早盘一度封到 <b>56.96（+10.00% 涨停）</b>，随后炸板，收 54.04（+4.36%），全天振幅 10.24%，换手 12.84%、成交 15.31 亿。<b>在 4900 只下跌里逆势收红，而且是"摸过涨停"的红，这条线（算力 + 通信服务）是真有人做。</b>但也要清醒：<b>炸板就是炸板</b>，封不住说明上方有兑现盘。</div>
-  <div class="p">组合层面：<b>1红7绿</b>，但结构上有讲究——上证50ETF 只跌 0.56%、牧原只跌 0.22%，<b>防御那半边守住了</b>；血都流在创业板ETF（-3.32%）、振华（-3.51%）、光云（-6.69%）这些成长仓上。<b>这正是今天全市场的缩影：谁贵谁挨刀。</b></div>
-  <div class="note">价格来源：腾讯财经实时行情（时间戳 20261027 16:14，昨收与 10/26 存档逐位吻合，无复权错位）。</div>
+  <div class="note">
+    <b>逐个说：</b><b>润建 56.25 / +4.09%</b>——盘中最高 59.44 摸到涨停又打开，换手 22.38%、成交 27.50 亿，典型的"高位放量分歧"，昨天 +4.36% 今天 +4.09%，两天累计 8.7% 却两次都没封住，<span class="y">减半仓，留观察仓看 5 日线</span>。<b>创业板ETF +3.36%</b> 基本吃满指数，持有。<b>振华 +1.87%、光云 +1.83%</b> 只是跟着指数飘，量能没放大，观察。<b>金钼 +0.42%</b> 但钼概念主力 -12.93 亿、有色 -21.39 亿，<b>涨得比板块弱、资金在撤，减</b>。<b>上证50ETF +0.14%</b> 几乎没动，权重今天是提款机，减。<b>证券ETF -0.80%</b> 是唯一绿，券商 -14.10 亿 + 华鑫股份、瑞达期货双双跌停，<b>这是今天最明确的弱势信号，别抄</b>。<b>牧原 -2.63%</b> 跌破 41，养殖业 -1.64%，生猪链没有独立逻辑，41 是止损位，破了就走。
+  </div>
 </div>
 
 <!-- 09 -->
 <div class="card">
-  <h2><span class="no">09</span>明日策略：等信号，不猜底</h2>
-  <h3 class="sec">可以关注</h3>
-  <div class="li"><b>银行/红利：</b>今天唯一大额净流入（+7.50亿），工行建行历史新高、21家中期分红超2600亿。<b>科技筹码没出清前，这条线还有相对收益</b>，但别追高，回落才配。</div>
-  <div class="li"><b>机器人零部件（电机/减速器）：</b>全场唯一的进攻线，电机二级 <b>+0.52% / 资金 +6.80亿</b>，逆势正流入。<b>关键区分：买"能交货的零部件"，别买"只讲整机故事"的</b>——机器人概念整体还流出154.33亿。</div>
-  <div class="li"><b>润建股份：</b>给定两个可执行分支——<b>① 明日缩量回封 56.96 以上，趋势延续，持有；② 低开并跌破 51.66（今日低点），说明炸板是出货，先减。</b>不要用"逆势红"当免死金牌。</div>
-  <div class="li"><b>宽基ETF：</b>今日沪深300等未见尾盘放量，<b>如果明后天重新出现尾盘放量托底，就是短线第一个可跟的信号</b>；创业板ETF易方达今日净申购4.37亿份（约11亿元），说明低位有资金在承接。</div>
-  <h3 class="sec">需要回避</h3>
-  <div class="li"><b>半导体/AI硬件：</b>大摩明说可能再跌10-15%，半导体主力 -74.21亿。<b>产业逻辑没错，但筹码没出清前，反弹都是减仓机会。</b></div>
-  <div class="li"><b>军工（航空装备 -5.13%）：</b>洪都航空跌停，前期涨幅大、又撞三季报验证期，别接。</div>
-  <div class="li"><b>三季报未披露的高位题材股：</b>现在是"业绩好也跌、业绩差更跌"的不对称结构，赌财报是负期望。</div>
-  <div class="li"><b>连板高位股：</b>上海九百 5 板、弘景光电炸9次封单薄，缩量环境下追高的赔率极差。</div>
-  <h3 class="sec">仓位</h3>
-  <div class="p"><b>建议 4-5 成，不加仓。</b>理由：情绪在冰点、成交连续三日缩量、护盘未出手、本周四个大事件未落地（美联储10/29凌晨、五中全会公报10/29、美国PCE周四、三季报10/31收官）。<b>冰点会反弹，但"缩量阴跌"的反弹往往只有一两天</b>，重仓抄底是拿运气赌节奏。</div>
-  <div class="p"><b>观察三个确认信号，缺一不可：</b>① 成交额重回 1.6 万亿以上；② 概念红盘数从 5 回到 100 以上；③ 出现尾盘宽基ETF放量。<b>三个都没有，就继续等。</b>止损纪律不变：沪指跌破 3574.27（10/23 低点），减到 3 成以下。</div>
+  <div class="ttl"><span class="no">09</span><span class="nm">明日策略</span><span class="ex">2026-10-29 周四</span></div>
+  <div class="strat s1">
+    <div class="h">▲ 可关注</div>
+    <b>光模块/CPO 与光芯片</b>：Lumentum 产能预订到 2029 年是硬信息，中际旭创 +10.28%、新易盛 +8.08% 是龙头打样，回踩不破 5 日线可跟；<b>元件/覆铜板</b>：金安国纪从 2 连跌停到封单王，说明这条链的杀跌是情绪性的，位置比故事重要；<b>半导体设备/先进封装</b>：台积电 CoWoS 涨价 10-20% 直接传导。
+  </div>
+  <div class="strat s2">
+    <div class="h">▼ 回避</div>
+    <b>白酒</b>：五粮液 Q3 净利 -48.25%，周五茅台三季报是颗雷，别去接；<b>券商</b>：华鑫股份、瑞达期货双双跌停，证券 ETF 唯一收绿，主力 -14.10 亿；<b>机器人高位连板</b>：午后批量炸板、宇树 700 元得而复失，明天早盘有回流但别追 3 板以上；<b>昨日炸板的 69 只</b>：封板率 51% 的直接后果。
+  </div>
+  <div class="strat s3">
+    <div class="h">● 仓位</div>
+    维持 <b>4~5 成</b>，不加。理由三条：①今晚美联储 + 明天全会公报 + 美国 PCE 三件事在 24 小时内落地，方向没出来之前加仓是赌；②封板率 51%、晋级率 25%，赚钱效应不支持重仓；③两融 13 连降说明杠杆盘还在撤，底部通常要"缩量磨"而不是"放量涨"。<b>如果明天缩量不破今天低点，可以加到 6 成；如果放量跌破 3652，降到 3 成。</b>
+  </div>
 </div>
 
-<div class="q">
-  <p>"全世界都在涨，只有我们在跌——<br>不是外面下雨，是我们屋顶漏了。"</p>
+<div class="quote">
+  <div class="q">"指数涨了 3.4%，封板率却掉到 51%——<br>今天回来的不是情绪，是被换手一遍的筹码。"</div>
+  <div class="s">—— 大王</div>
 </div>
 
 <div class="ft">
-  大王 · A股复盘 · 2026年10月27日 星期二<br>
-  数据来源：腾讯财经实时行情 / 东方财富涨停池·炸板池·跌停池 / 申万行业资金流 / 国家统计局 / 新华社 / 财联社<br>
-  所有数据逐项核实，未使用估算值。以上为个人复盘记录，不构成任何投资建议。
+  数据来源：腾讯行情（指数/个股/申万行业/概念）、东方财富（涨停池/涨跌家数）、证券时报·数据宝、财联社、智通财经、新华财经、中国证券报<br>
+  涨停 72 / 炸板 69 / 封板率 51% 与财联社口径一致；跌停 10 只为主板 ±10% 自查口径（东财跌停池记 5 只）<br>
+  本看板仅为个人复盘记录，不构成投资建议
 </div>
 
 </div>
